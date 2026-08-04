@@ -4,6 +4,8 @@ import './styles/typography.css';
 import './styles/utilities.css';
 import './styles/global.css';
 
+import { createHero } from './components/hero/hero.js';
+
 const app = document.querySelector('#app');
 
 if (!app) {
@@ -12,11 +14,6 @@ if (!app) {
 
 app.innerHTML = `
   <main class="np-home">
-    <section class="np-section">
-      <div class="np-container">
-        <h1>New Pig México</h1>
-        <p>El entorno base del prototipo funciona correctamente.</p>
-      </div>
-    </section>
+    ${createHero()}
   </main>
 `;
