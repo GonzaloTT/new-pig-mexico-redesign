@@ -1,0 +1,52 @@
+:root {
+  /* Colors */
+  --np-color-primary: #003f75;
+  --np-color-primary-dark: #002f59;
+  --np-color-secondary: #0878bd;
+  --np-color-accent: #f8c400;
+
+  --np-color-text: #17304f;
+  --np-color-text-light: #64748b;
+
+  --np-color-white: #ffffff;
+  --np-color-background: #f5f8fa;
+  --np-color-border: #d9e2e9;
+
+  /* Typography */
+  --np-font-family:
+    Arial, Helvetica, sans-serif;
+
+  --np-font-size-sm: 0.875rem;
+  --np-font-size-md: 1rem;
+  --np-font-size-lg: 1.125rem;
+  --np-font-size-xl: 1.5rem;
+
+  /* Spacing */
+  --np-space-1: 0.25rem;
+  --np-space-2: 0.5rem;
+  --np-space-3: 0.75rem;
+  --np-space-4: 1rem;
+  --np-space-5: 1.5rem;
+  --np-space-6: 2rem;
+  --np-space-7: 3rem;
+  --np-space-8: 4rem;
+  --np-space-9: 6rem;
+
+  /* Layout */
+  --np-container-width: 1200px;
+  --np-container-padding: 1.5rem;
+
+  /* Borders */
+  --np-radius-sm: 0.25rem;
+  --np-radius-md: 0.5rem;
+  --np-radius-lg: 1rem;
+  --np-radius-pill: 999px;
+
+  /* Shadows */
+  --np-shadow-sm: 0 4px 12px rgb(15 23 42 / 8%);
+  --np-shadow-md: 0 12px 30px rgb(15 23 42 / 12%);
+
+  /* Transitions */
+  --np-transition-fast: 150ms ease;
+  --np-transition-normal: 250ms ease;
+}

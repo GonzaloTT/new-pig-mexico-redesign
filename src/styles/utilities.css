@@ -1,0 +1,23 @@
+.np-container {
+  width: min(
+    calc(100% - (var(--np-container-padding) * 2)),
+    var(--np-container-width)
+  );
+  margin-inline: auto;
+}
+
+.np-section {
+  padding-block: var(--np-space-8);
+}
+
+.np-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
