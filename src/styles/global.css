@@ -13,6 +13,47 @@ button {
   cursor: pointer;
 }
 
+.np-button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: var(--np-space-2);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--np-radius-sm);
+  font-weight: 700;
+  transition:
+    background-color var(--np-transition-fast),
+    color var(--np-transition-fast),
+    border-color var(--np-transition-fast),
+    transform var(--np-transition-fast);
+}
+
+.np-button:hover {
+  transform: translateY(-1px);
+}
+
+.np-button:focus-visible {
+  outline: 3px solid rgb(8 120 189 / 35%);
+  outline-offset: 3px;
+}
+
+.np-button--primary {
+  color: var(--np-color-white);
+  background-color: var(--np-color-secondary);
+}
+
+.np-button--primary:hover {
+  background-color: var(--np-color-primary);
+}
+
+.np-button--secondary {
+  color: var(--np-color-primary);
+  background-color: var(--np-color-white);
+  border-color: var(--np-color-primary);
+}
+
 main {
   overflow: hidden;
 }
