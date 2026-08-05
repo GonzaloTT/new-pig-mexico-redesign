@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320">
+  <!-- Placeholder ilustrativo: fotografía del equipo pendiente de entrega del cliente -->
+  <rect width="480" height="320" fill="#dbe6f0"/>
+  <rect x="0" y="220" width="480" height="100" fill="#c3d4e6"/>
+  <rect x="40" y="60" width="120" height="140" fill="#ffffff" opacity="0.6"/>
+  <rect x="320" y="60" width="120" height="140" fill="#ffffff" opacity="0.6"/>
+  <g fill="#0a2540">
+    <circle cx="150" cy="230" r="22"/>
+    <rect x="132" y="252" width="36" height="60" rx="10"/>
+    <circle cx="205" cy="220" r="24"/>
+    <rect x="185" y="244" width="40" height="66" rx="10"/>
+    <circle cx="265" cy="220" r="24"/>
+    <rect x="245" y="244" width="40" height="66" rx="10"/>
+    <circle cx="325" cy="230" r="22"/>
+    <rect x="307" y="252" width="36" height="60" rx="10"/>
+  </g>
+</svg>
