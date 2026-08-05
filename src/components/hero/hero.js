@@ -109,7 +109,7 @@ function getSidebarIcon(name) {
 
 function iconArrowRight() {
   return `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `;
@@ -117,7 +117,7 @@ function iconArrowRight() {
 
 function iconWhatsappSmall() {
   return `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M20 12a8 8 0 1 1-3.7-6.8L20 4l-1.2 3.7A8 8 0 0 1 20 12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
       <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.3 0 .6 0 .8-.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
