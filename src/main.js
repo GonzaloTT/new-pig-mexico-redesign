@@ -32,6 +32,9 @@ import { createFooter } from './components/footer/footer.js';
 import { initNavigation } from './scripts/navigation.js';
 import { initForms } from './scripts/forms.js';
 
+// Componentes whatsapp-float
+import { createWhatsappFloat } from './components/whatsapp-float/whatsapp-float.js';
+
 function renderHome(root) {
   root.innerHTML = `
     ${createHeader()}
@@ -45,6 +48,7 @@ function renderHome(root) {
       ${createTestimonials()}
     </main>
     ${createFooter()}
+    ${createWhatsappFloat()}
   `;
 }
 
