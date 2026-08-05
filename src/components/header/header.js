@@ -29,11 +29,12 @@ export function createHeader() {
       <div class="np-header__main">
         <div class="np-container np-header__main-inner">
           <a href="#" class="np-header__brand" aria-label="New Pig México, ir al inicio">
-            <span class="np-header__logo" aria-hidden="true">
-              <svg viewBox="0 0 40 40" width="40" height="40" role="img" aria-hidden="true">
-                <rect width="40" height="40" rx="10" fill="var(--np-color-secondary)"></rect>
-                <text x="50%" y="58%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#ffffff">pig</text>
-              </svg>
+            <span class="np-header__logo">
+            <img
+              src="/images/logos/logo-new-pig-mexico.png"
+              alt="New Pig México"
+              class="np-header__logo-image"
+            >
             </span>
             <span class="np-header__brand-text">
               <span class="np-header__brand-name">New Pig México</span>

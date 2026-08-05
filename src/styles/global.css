@@ -3,16 +3,21 @@
    Estilos globales de aplicación: body, #app, botones, focus, overflow.
    ========================================================================== */
 
+html {
+  overflow-x: clip;
+}
+
 body {
+  min-width: 320px;
+  min-height: 100vh;
   background-color: var(--np-color-background);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #app {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* ---------------------------------------------------------------------

@@ -5,7 +5,9 @@
 .np-header {
   position: sticky;
   top: 0;
+  align-self: flex-start;
   z-index: var(--np-z-sticky);
+  width: 100%;
   background-color: var(--np-color-white);
   box-shadow: var(--np-shadow-sm);
 }
@@ -19,7 +21,7 @@
 .np-header__topbar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--np-space-md);
   padding-block: var(--np-space-xs);
   font-size: var(--np-font-size-xs);
@@ -36,6 +38,19 @@
 .np-header__topbar-message svg {
   flex-shrink: 0;
   color: var(--np-color-accent);
+}
+
+.np-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.np-header__logo-image {
+  display: block;
+  width: 32px;      /* Ajusta según tu diseño */
+  height: auto;
+  object-fit: contain;
 }
 
 .np-header__topbar-phone {
