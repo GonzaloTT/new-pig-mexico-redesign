@@ -1,0 +1,291 @@
+/* ==========================================================================
+   HEADER.CSS
+   ========================================================================== */
+
+.np-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--np-z-sticky);
+  background-color: var(--np-color-white);
+  box-shadow: var(--np-shadow-sm);
+}
+
+/* --- Topbar --- */
+.np-header__topbar {
+  background-color: var(--np-color-primary);
+  color: var(--np-color-on-dark);
+}
+
+.np-header__topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--np-space-md);
+  padding-block: var(--np-space-xs);
+  font-size: var(--np-font-size-xs);
+}
+
+.np-header__topbar-message {
+  display: flex;
+  align-items: center;
+  gap: var(--np-space-xs);
+  color: var(--np-color-on-dark-muted);
+  margin: 0;
+}
+
+.np-header__topbar-message svg {
+  flex-shrink: 0;
+  color: var(--np-color-accent);
+}
+
+.np-header__topbar-phone {
+  white-space: nowrap;
+  font-weight: var(--np-font-weight-medium);
+}
+
+.np-header__topbar-phone:hover,
+.np-header__topbar-phone:focus-visible {
+  color: var(--np-color-accent);
+}
+
+@media (max-width: 767px) {
+  .np-header__topbar-message span {
+    display: none;
+  }
+}
+
+/* --- Main nav row --- */
+.np-header__main-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--np-space-lg);
+  padding-block: var(--np-space-sm);
+}
+
+/* --- Brand --- */
+.np-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--np-space-sm);
+  flex-shrink: 0;
+}
+
+.np-header__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.np-header__brand-name {
+  font-size: var(--np-font-size-md);
+  font-weight: var(--np-font-weight-black);
+  color: var(--np-color-text);
+}
+
+.np-header__brand-tagline {
+  font-size: 0.7rem;
+  color: var(--np-color-secondary);
+  font-weight: var(--np-font-weight-medium);
+}
+
+@media (max-width: 599px) {
+  .np-header__brand-tagline {
+    display: none;
+  }
+}
+
+/* --- Nav --- */
+.np-header__nav {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .np-header__nav {
+    display: block;
+  }
+}
+
+.np-header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--np-space-lg);
+  flex-wrap: wrap;
+}
+
+.np-header__nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-medium);
+  color: var(--np-color-text);
+  padding-block: var(--np-space-xs);
+}
+
+.np-header__nav-link:hover,
+.np-header__nav-link:focus-visible {
+  color: var(--np-color-secondary);
+}
+
+.np-header__chevron {
+  transition: transform var(--np-transition-fast);
+}
+
+/* --- Actions --- */
+.np-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--np-space-xs);
+}
+
+.np-header__search {
+  display: none;
+  position: relative;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .np-header__search {
+    display: flex;
+  }
+}
+
+.np-header__search-input {
+  width: clamp(160px, 16vw, 240px);
+  padding: 0.55rem 2.4rem 0.55rem 0.9rem;
+  border: 1px solid var(--np-color-border);
+  border-radius: var(--np-radius-full);
+  font-size: var(--np-font-size-sm);
+  background-color: var(--np-color-gray-light);
+}
+
+.np-header__search-button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--np-radius-full);
+  color: var(--np-color-muted);
+}
+
+.np-header__search-button:hover,
+.np-header__search-button:focus-visible {
+  color: var(--np-color-secondary);
+}
+
+.np-header__action {
+  color: var(--np-color-primary);
+}
+
+.np-header__action:hover,
+.np-header__action:focus-visible {
+  background-color: var(--np-color-secondary-light);
+  color: var(--np-color-secondary);
+}
+
+@media (max-width: 599px) {
+  .np-header__action {
+    display: none;
+  }
+
+  .np-header__action[aria-label="Contactar por WhatsApp"] {
+    display: inline-flex;
+  }
+}
+
+/* --- Menu toggle (mobile) --- */
+.np-header__menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--np-radius-sm);
+  color: var(--np-color-primary);
+}
+
+.np-header__menu-toggle:hover,
+.np-header__menu-toggle:focus-visible {
+  background-color: var(--np-color-secondary-light);
+}
+
+@media (min-width: 1024px) {
+  .np-header__menu-toggle {
+    display: none;
+  }
+}
+
+/* --- Mobile nav panel --- */
+.np-header__mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(320px, 85vw);
+  background-color: var(--np-color-white);
+  box-shadow: var(--np-shadow-lg);
+  z-index: var(--np-z-overlay);
+  padding: calc(var(--np-space-xl) + 2.5rem) var(--np-space-lg) var(--np-space-lg);
+  transform: translateX(100%);
+  transition: transform var(--np-transition-slow);
+  overflow-y: auto;
+}
+
+.np-header__mobile-nav[data-state="open"] {
+  transform: translateX(0);
+}
+
+.np-header__mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--np-space-xs);
+}
+
+.np-header__mobile-nav-link {
+  display: block;
+  padding: var(--np-space-sm) var(--np-space-xs);
+  font-size: var(--np-font-size-md);
+  font-weight: var(--np-font-weight-medium);
+  border-bottom: 1px solid var(--np-color-border);
+  color: var(--np-color-text);
+}
+
+.np-header__mobile-nav-link:hover,
+.np-header__mobile-nav-link:focus-visible {
+  color: var(--np-color-secondary);
+}
+
+@media (min-width: 1024px) {
+  .np-header__mobile-nav {
+    display: none;
+  }
+}
+
+/* --- Overlay --- */
+.np-header__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 37, 64, 0.5);
+  z-index: var(--np-z-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--np-transition-base);
+}
+
+.np-header__overlay[data-state="open"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 1024px) {
+  .np-header__overlay {
+    display: none;
+  }
+}
