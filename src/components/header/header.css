@@ -152,7 +152,7 @@
 .np-header__actions {
   display: flex;
   align-items: center;
-  gap: var(--np-space-xs);
+  gap: var(--np-space-sm);
 }
 
 .np-header__search {
@@ -196,13 +196,45 @@
 }
 
 .np-header__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--np-color-border);
+  border-radius: 50%;
+
+  background-color: var(--np-color-white);
   color: var(--np-color-primary);
+
+  box-shadow: var(--np-shadow-sm);
+
+  transition:
+    background-color var(--np-transition-base),
+    border-color var(--np-transition-base),
+    color var(--np-transition-base),
+    transform var(--np-transition-fast);
+}
+
+.np-header__action[aria-label="Contactar por WhatsApp"] {
+  color: var(--np-color-secondary);
+  border-color: var(--np-color-secondary);
+}
+
+.np-header__action[aria-label="Contactar por WhatsApp"]:hover,
+.np-header__action[aria-label="Contactar por WhatsApp"]:focus-visible {
+  background-color: var(--np-color-secondary);
+  color: var(--np-color-white);
 }
 
 .np-header__action:hover,
 .np-header__action:focus-visible {
   background-color: var(--np-color-secondary-light);
+  border-color: var(--np-color-secondary);
   color: var(--np-color-secondary);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 599px) {

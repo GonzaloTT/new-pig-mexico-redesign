@@ -158,7 +158,7 @@ function iconSearch() {
 
 function iconWhatsapp() {
   return `
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M20 12a8 8 0 1 1-3.7-6.8L20 4l-1.2 3.7A8 8 0 0 1 20 12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
       <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.3 0 .6 0 .8-.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
@@ -167,7 +167,7 @@ function iconWhatsapp() {
 
 function iconUser() {
   return `
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/>
       <path d="M4.5 20c1.4-3.5 4.3-5.5 7.5-5.5s6.1 2 7.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
@@ -176,7 +176,7 @@ function iconUser() {
 
 function iconCart() {
   return `
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M3 4h2l2.4 11.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="10" cy="20" r="1.3" fill="currentColor"/>
       <circle cx="17" cy="20" r="1.3" fill="currentColor"/>
