@@ -2,6 +2,10 @@
    CATEGORIES.CSS
    ========================================================================== */
 
+.np-categories {
+  padding: 16px 0;
+}
+
 .np-categories__header {
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +78,7 @@
 
 .np-category-card__title {
   font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-medium);
-  color: var(--np-color-text);
+  font-weight: var(--np-font-weight-bold);
+  color: var(--np-color-primary);
   line-height: var(--np-line-height-snug);
 }
