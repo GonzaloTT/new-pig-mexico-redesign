@@ -1,0 +1,115 @@
+/* ==========================================================================
+   EXPERT-SEARCH.CSS
+   ========================================================================== */
+
+.np-expert-search {
+  background-color: var(--np-color-white);
+}
+
+.np-expert-search__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--np-space-2xl);
+}
+
+.np-expert-search__intro {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--np-space-md);
+}
+
+.np-expert-search__title {
+  font-size: var(--np-font-size-2xl);
+  color: var(--np-color-primary);
+}
+
+.np-expert-search__description {
+  font-size: var(--np-font-size-md);
+  max-width: 60ch;
+}
+
+.np-expert-search__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--np-space-md);
+  margin-top: var(--np-space-sm);
+}
+
+.np-expert-search__panel {
+  width: 100%;
+  max-width: 780px;
+  background-color: var(--np-color-gray-light);
+  border-radius: var(--np-radius-lg);
+  padding: var(--np-space-xl);
+}
+
+.np-expert-search__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--np-space-md);
+}
+
+.np-expert-search__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--np-space-sm);
+  background-color: var(--np-color-white);
+  border: 1px solid var(--np-color-border);
+  border-radius: var(--np-radius-full);
+  padding: var(--np-space-2xs);
+  padding-left: var(--np-space-lg);
+  box-shadow: var(--np-shadow-sm);
+}
+
+.np-expert-search__field-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  color: var(--np-color-muted);
+}
+
+.np-expert-search__input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--np-space-sm) 0;
+  font-size: var(--np-font-size-base);
+  background: transparent;
+}
+
+.np-expert-search__input::placeholder {
+  color: var(--np-color-gray-dark);
+}
+
+.np-expert-search__submit {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .np-expert-search__field {
+    flex-wrap: wrap;
+    border-radius: var(--np-radius-md);
+    padding: var(--np-space-md);
+  }
+
+  .np-expert-search__submit {
+    width: 100%;
+  }
+}
+
+.np-expert-search__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--np-space-sm);
+}
+
+.np-expert-search__chips .np-chip {
+  border: 1px solid var(--np-color-border);
+  background-color: var(--np-color-white);
+}
