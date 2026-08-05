@@ -1,0 +1,80 @@
+/* ==========================================================================
+   CATEGORIES.CSS
+   ========================================================================== */
+
+.np-categories__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--np-space-md);
+  margin-bottom: var(--np-space-xl);
+}
+
+.np-categories__title {
+  font-size: var(--np-font-size-2xl);
+  margin-bottom: var(--np-space-2xs);
+}
+
+.np-categories__subtitle {
+  color: var(--np-color-muted);
+  margin: 0;
+}
+
+.np-categories__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--np-space-2xs);
+  font-weight: var(--np-font-weight-bold);
+  font-size: var(--np-font-size-sm);
+  color: var(--np-color-secondary);
+  white-space: nowrap;
+}
+
+.np-categories__link:hover,
+.np-categories__link:focus-visible {
+  color: var(--np-color-primary);
+}
+
+.np-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--np-space-md);
+}
+
+.np-category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--np-space-sm);
+  text-align: center;
+  padding: var(--np-space-lg) var(--np-space-sm);
+  background-color: var(--np-color-white);
+  border: 1px solid var(--np-color-border);
+  border-radius: var(--np-radius-md);
+  transition: border-color var(--np-transition-base), box-shadow var(--np-transition-base),
+    transform var(--np-transition-base);
+}
+
+.np-category-card:hover,
+.np-category-card:focus-visible {
+  border-color: var(--np-color-secondary);
+  box-shadow: var(--np-shadow-md);
+  transform: translateY(-3px);
+}
+
+.np-category-card__visual {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+.np-category-card__title {
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-medium);
+  color: var(--np-color-text);
+  line-height: var(--np-line-height-snug);
+}
