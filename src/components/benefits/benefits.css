@@ -1,0 +1,60 @@
+/* ==========================================================================
+   BENEFITS.CSS
+   ========================================================================== */
+
+.np-benefits {
+  background-color: var(--np-color-white);
+  border-bottom: 1px solid var(--np-color-border);
+  padding-block: var(--np-space-xl);
+}
+
+.np-benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--np-space-lg);
+}
+
+@media (min-width: 640px) {
+  .np-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .np-benefits__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.np-benefits__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--np-space-sm);
+}
+
+.np-benefits__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--np-radius-sm);
+  background-color: var(--np-color-secondary-light);
+  color: var(--np-color-secondary);
+}
+
+.np-benefits__title {
+  font-weight: var(--np-font-weight-bold);
+  font-size: var(--np-font-size-sm);
+  color: var(--np-color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 2px;
+}
+
+.np-benefits__description {
+  font-size: var(--np-font-size-sm);
+  color: var(--np-color-muted);
+  margin: 0;
+}
