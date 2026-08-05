@@ -1,27 +1,83 @@
+/* ==========================================================================
+   TYPOGRAPHY.CSS
+   Jerarquía tipográfica global.
+   ========================================================================== */
+
 body {
-  font-family: var(--np-font-family);
+  font-family: var(--np-font-family-base);
+  font-size: var(--np-font-size-base);
+  font-weight: var(--np-font-weight-regular);
+  line-height: var(--np-line-height-base);
   color: var(--np-color-text);
-  line-height: 1.5;
+  background-color: var(--np-color-background);
 }
 
 h1,
 h2,
-h3 {
-  line-height: 1.1;
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--np-font-weight-bold);
+  line-height: var(--np-line-height-tight);
+  color: var(--np-color-text);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: var(--np-font-size-3xl);
+  font-weight: var(--np-font-weight-black);
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-size: var(--np-font-size-2xl);
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-size: var(--np-font-size-xl);
+}
+
+h4 {
+  font-size: var(--np-font-size-lg);
 }
 
 p {
-  font-size: var(--np-font-size-md);
+  font-size: var(--np-font-size-base);
+  line-height: var(--np-line-height-relaxed);
+  color: var(--np-color-muted);
+}
+
+small {
+  font-size: var(--np-font-size-xs);
+}
+
+strong {
+  font-weight: var(--np-font-weight-bold);
+}
+
+a {
+  transition: color var(--np-transition-fast);
+}
+
+/* Utilidad tipográfica: eyebrow (texto pequeño superior, ej. "NUEVA LÍNEA") */
+.np-eyebrow {
+  display: inline-block;
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--np-color-accent);
+}
+
+.np-text-accent {
+  color: var(--np-color-accent);
+}
+
+.np-text-on-dark {
+  color: var(--np-color-on-dark);
+}
+
+.np-text-muted-on-dark {
+  color: var(--np-color-on-dark-muted);
 }

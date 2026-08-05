@@ -1,59 +1,146 @@
+/* ==========================================================================
+   GLOBAL.CSS
+   Estilos globales de aplicación: body, #app, botones, focus, overflow.
+   ========================================================================== */
+
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--np-color-white);
+  background-color: var(--np-color-background);
+  overflow-x: hidden;
 }
 
 #app {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
-button {
-  border: 0;
-  cursor: pointer;
+/* ---------------------------------------------------------------------
+   FOCUS VISIBLE — accesibilidad de teclado
+   --------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--np-shadow-focus);
+  border-radius: var(--np-radius-sm);
 }
 
+/* ---------------------------------------------------------------------
+   BOTONES GLOBALES
+   --------------------------------------------------------------------- */
 .np-button {
   display: inline-flex;
-  min-height: 3rem;
   align-items: center;
   justify-content: center;
-  gap: var(--np-space-2);
-  padding: 0.75rem 1.5rem;
-  border: 1px solid transparent;
-  border-radius: var(--np-radius-sm);
-  font-weight: 700;
-  transition:
-    background-color var(--np-transition-fast),
-    color var(--np-transition-fast),
-    border-color var(--np-transition-fast),
+  gap: var(--np-space-xs);
+  padding: 0.85rem 1.5rem;
+  font-size: var(--np-font-size-base);
+  font-weight: var(--np-font-weight-bold);
+  border-radius: var(--np-radius-full);
+  border: 2px solid transparent;
+  white-space: nowrap;
+  transition: background-color var(--np-transition-base),
+    color var(--np-transition-base), border-color var(--np-transition-base),
     transform var(--np-transition-fast);
 }
 
-.np-button:hover {
-  transform: translateY(-1px);
-}
-
-.np-button:focus-visible {
-  outline: 3px solid rgb(8 120 189 / 35%);
-  outline-offset: 3px;
+.np-button:active {
+  transform: translateY(1px);
 }
 
 .np-button--primary {
-  color: var(--np-color-white);
   background-color: var(--np-color-secondary);
+  color: var(--np-color-white);
 }
 
-.np-button--primary:hover {
-  background-color: var(--np-color-primary);
+.np-button--primary:hover,
+.np-button--primary:focus-visible {
+  background-color: #184c99;
 }
 
-.np-button--secondary {
-  color: var(--np-color-primary);
-  background-color: var(--np-color-white);
-  border-color: var(--np-color-primary);
+.np-button--accent {
+  background-color: var(--np-color-accent);
+  color: var(--np-color-primary-dark);
 }
 
-main {
+.np-button--accent:hover,
+.np-button--accent:focus-visible {
+  background-color: var(--np-color-accent-dark);
+}
+
+.np-button--outline {
+  background-color: transparent;
+  border-color: var(--np-color-white);
+  color: var(--np-color-white);
+}
+
+.np-button--outline:hover,
+.np-button--outline:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.np-button--outline-dark {
+  background-color: transparent;
+  border-color: var(--np-color-secondary);
+  color: var(--np-color-secondary);
+}
+
+.np-button--outline-dark:hover,
+.np-button--outline-dark:focus-visible {
+  background-color: var(--np-color-secondary-light);
+}
+
+.np-button--sm {
+  padding: 0.6rem 1.1rem;
+  font-size: var(--np-font-size-sm);
+}
+
+.np-button--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--np-radius-full);
+  background-color: transparent;
+  color: currentColor;
+  transition: background-color var(--np-transition-fast);
+}
+
+.np-button--icon:hover,
+.np-button--icon:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------------------------------------------------------------------
+   IMÁGENES / PLACEHOLDERS RESPONSIVOS
+   --------------------------------------------------------------------- */
+.np-media {
+  position: relative;
+  width: 100%;
   overflow: hidden;
+  border-radius: var(--np-radius-md);
+}
+
+.np-media img,
+.np-media svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------------------
+   PREVENCIÓN DE OVERFLOW GENERAL
+   --------------------------------------------------------------------- */
+.np-container,
+section,
+header,
+footer,
+main {
+  max-width: 100%;
 }

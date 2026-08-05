@@ -1,8 +1,9 @@
 {
   "name": "new-pig-mexico-home-redesign",
-  "version": "0.0.0",
   "private": true,
+  "version": "0.1.0",
   "type": "module",
+  "description": "Prototipo visual de rediseño de la Home de New Pig México. Vite Vanilla + JS ES Modules, preparado para futura migración a Shopify Liquid.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
