@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .np-categories {
+  width: 100%;
   padding: 16px 0;
 }
 
@@ -16,22 +17,24 @@
 }
 
 .np-categories__title {
-  font-size: var(--np-font-size-2xl);
   margin-bottom: var(--np-space-2xs);
+  font-size: var(--np-font-size-2xl);
 }
 
 .np-categories__subtitle {
-  color: var(--np-color-muted);
   margin: 0;
+  color: var(--np-color-muted);
 }
 
 .np-categories__link {
   display: inline-flex;
   align-items: center;
   gap: var(--np-space-2xs);
-  font-weight: var(--np-font-weight-bold);
+
   font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
   color: var(--np-color-secondary);
+
   white-space: nowrap;
 }
 
@@ -40,10 +43,48 @@
   color: var(--np-color-primary);
 }
 
+/* --------------------------------------------------------------------------
+   Grid de categorías
+
+   Mobile first:
+   - Mobile pequeño: 1 columna
+   - Mobile: 2 columnas
+   - Tablet: 3 columnas
+   - Desktop pequeño: 5 columnas
+   - Desktop amplio: las 9 categorías ocupan una sola fila y distribuyen
+     uniformemente todo el ancho disponible.
+   -------------------------------------------------------------------------- */
+
 .np-categories__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: 1fr;
+
+  width: 100%;
   gap: var(--np-space-md);
+}
+
+@media (min-width: 480px) {
+  .np-categories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .np-categories__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .np-categories__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .np-categories__grid {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
 }
 
 .np-category-card {
@@ -51,13 +92,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 150px;
+
   gap: var(--np-space-sm);
-  text-align: center;
+
   padding: var(--np-space-lg) var(--np-space-sm);
+
+  text-align: center;
+
   background-color: var(--np-color-white);
+
   border: 1px solid var(--np-color-border);
   border-radius: var(--np-radius-md);
-  transition: border-color var(--np-transition-base), box-shadow var(--np-transition-base),
+
+  transition:
+    border-color var(--np-transition-base),
+    box-shadow var(--np-transition-base),
     transform var(--np-transition-base);
 }
 
@@ -72,8 +125,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   width: 64px;
   height: 64px;
+
+  flex-shrink: 0;
+}
+
+.np-category-card__visual svg {
+  width: 48px;
+  height: 48px;
 }
 
 .np-category-card__title {
@@ -81,4 +142,24 @@
   font-weight: var(--np-font-weight-bold);
   color: var(--np-color-primary);
   line-height: var(--np-line-height-snug);
+
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   Ajustes para las 9 tarjetas en una sola fila
+
+   Al haber nueve columnas, reducimos ligeramente padding y tipografía
+   para conservar buena legibilidad sin generar overflow.
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1280px) {
+  .np-category-card {
+    min-height: 160px;
+    padding: var(--np-space-md) var(--np-space-xs);
+  }
+
+  .np-category-card__title {
+    font-size: var(--np-font-size-xs);
+  }
 }
