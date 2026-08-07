@@ -4,8 +4,12 @@
 
 .np-whatsapp-float {
   position: fixed;
+
+  /* Centrado vertical en el viewport */
+  top: 50%;
   right: clamp(1rem, 2vw, 2rem);
-  bottom: clamp(1rem, 2vw, 2rem);
+  transform: translateY(-50%);
+
   z-index: var(--np-z-toast);
 
   display: inline-flex;
@@ -35,7 +39,10 @@
 
 .np-whatsapp-float:hover {
   background-color: #179e49;
-  transform: translateY(-2px);
+
+  /* Conservamos el translateY para no perder el centrado vertical */
+  transform: translateY(-50%) scale(1.03);
+
   box-shadow:
     0 12px 28px rgb(10 37 64 / 22%),
     0 4px 10px rgb(10 37 64 / 14%);
@@ -62,6 +69,7 @@
 }
 
 .np-whatsapp-float__icon svg {
+  display: block;
   width: 25px;
   height: 25px;
 }
@@ -83,14 +91,24 @@
   color: rgb(255 255 255 / 90%);
 }
 
-/* En móvil se muestra como botón circular para ocupar menos espacio. */
 @media (max-width: 599px) {
   .np-whatsapp-float {
+    top: auto;
+    right: 1rem;
+    bottom: 1.25rem;
+
     width: 56px;
     height: 56px;
     min-height: 56px;
+
     padding: 0;
     justify-content: center;
+
+    transform: none;
+  }
+
+  .np-whatsapp-float:hover {
+    transform: scale(1.03);
   }
 
   .np-whatsapp-float__icon {
@@ -109,6 +127,12 @@
   }
 
   .np-whatsapp-float:hover {
-    transform: none;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 599px) {
+    .np-whatsapp-float:hover {
+      transform: none;
+    }
   }
 }
