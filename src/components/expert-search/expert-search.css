@@ -6,78 +6,162 @@
   background-color: var(--np-color-white);
 }
 
+/* ==========================================================================
+   LAYOUT GENERAL
+
+   Mobile/tablet:
+   Una sola columna.
+
+   Desktop:
+   - contenido izquierdo amplio
+   - imagen derecha
+   ========================================================================== */
+
 .np-expert-search__container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  width: 100%;
+
+  gap: var(--np-space-2xl);
+
+  align-items: center;
+}
+
+/* ==========================================================================
+   COLUMNA IZQUIERDA
+   ========================================================================== */
+
+.np-expert-search__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+  width: 100%;
+  min-width: 0;
+
   gap: var(--np-space-2xl);
 }
 
+/* ==========================================================================
+   INTRO
+   ========================================================================== */
+
 .np-expert-search__intro {
-  max-width: 720px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+
   gap: var(--np-space-md);
+
+  text-align: center;
 }
 
 .np-expert-search__title {
+  width: 100%;
+  max-width: 800px;
+
+  margin-inline: auto;
+
   font-size: var(--np-font-size-2xl);
   color: var(--np-color-primary);
 }
 
 .np-expert-search__description {
-  font-size: var(--np-font-size-md);
+  width: 100%;
   max-width: 60ch;
+
+  margin-inline: auto;
+
+  font-size: var(--np-font-size-md);
 }
+
+/* ==========================================================================
+   CTA
+   ========================================================================== */
 
 .np-expert-search__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   gap: var(--np-space-md);
+
   margin-top: var(--np-space-sm);
 }
 
+/* ==========================================================================
+   PANEL DE BÚSQUEDA
+   ========================================================================== */
+
 .np-expert-search__panel {
   width: 100%;
-  max-width: 780px;
-  background-color: var(--np-color-gray-light);
-  border-radius: var(--np-radius-lg);
+  max-width: none;
+  min-width: 0;
+
   padding: var(--np-space-xl);
+
+  background-color: var(--np-color-gray-light);
+
+  border-radius: var(--np-radius-lg);
 }
+
+/* ==========================================================================
+   FORM
+   ========================================================================== */
 
 .np-expert-search__form {
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+
   gap: var(--np-space-md);
 }
 
+/* ==========================================================================
+   SEARCH FIELD
+   ========================================================================== */
+
 .np-expert-search__field {
   position: relative;
+
   display: flex;
   align-items: center;
+
+  width: 100%;
+
   gap: var(--np-space-sm);
-  background-color: var(--np-color-white);
-  border: 1px solid var(--np-color-border);
-  border-radius: var(--np-radius-full);
+
   padding: var(--np-space-2xs);
   padding-left: var(--np-space-lg);
+
+  background-color: var(--np-color-white);
+
+  border: 1px solid var(--np-color-border);
+  border-radius: var(--np-radius-full);
+
   box-shadow: var(--np-shadow-sm);
 }
 
 .np-expert-search__field-icon {
-  flex-shrink: 0;
   display: inline-flex;
+
+  flex-shrink: 0;
+
   color: var(--np-color-muted);
 }
 
 .np-expert-search__input {
   flex: 1;
+
   min-width: 0;
+
   padding: var(--np-space-sm) 0;
+
   font-size: var(--np-font-size-base);
+
   background: transparent;
 }
 
@@ -87,29 +171,161 @@
 
 .np-expert-search__submit {
   flex-shrink: 0;
+
   white-space: nowrap;
 }
 
-@media (max-width: 599px) {
-  .np-expert-search__field {
-    flex-wrap: wrap;
-    border-radius: var(--np-radius-md);
-    padding: var(--np-space-md);
-  }
-
-  .np-expert-search__submit {
-    width: 100%;
-  }
-}
+/* ==========================================================================
+   CHIPS
+   ========================================================================== */
 
 .np-expert-search__chips {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
+
   gap: var(--np-space-sm);
 }
 
 .np-expert-search__chips .np-chip {
   border: 1px solid var(--np-color-border);
+
   background-color: var(--np-color-white);
+}
+
+/* ==========================================================================
+   COLUMNA DERECHA / IMAGEN
+   ========================================================================== */
+
+.np-expert-search__media {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: var(--np-radius-lg);
+}
+
+/* Placeholder mientras esperamos la imagen definitiva */
+
+.np-expert-search__media-placeholder {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 320px;
+
+  gap: var(--np-space-md);
+
+  padding: var(--np-space-xl);
+
+  color: var(--np-color-muted);
+
+  background-color: var(--np-color-gray-light);
+
+  border: 1px dashed var(--np-color-gray-medium);
+  border-radius: inherit;
+}
+
+.np-expert-search__media-icon {
+  display: block;
+
+  width: 110px;
+  height: 110px;
+
+  color: var(--np-color-gray-dark);
+}
+
+.np-expert-search__media-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.np-expert-search__media-text {
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-medium);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .np-expert-search__container {
+    /*
+     * La izquierda recibe más espacio porque contiene:
+     * título + descripción + botones + buscador.
+     *
+     * Aproximadamente:
+     * 68% contenido / 32% imagen.
+     */
+    grid-template-columns:
+      minmax(0, 2.1fr)
+      minmax(300px, 1fr);
+
+    gap: var(--np-space-3xl);
+
+    align-items: stretch;
+  }
+
+  .np-expert-search__content {
+    justify-content: center;
+  }
+
+  /*
+   * Al estar dentro de una columna suficientemente amplia,
+   * mantenemos el mismo aspecto centrado del diseño original.
+   */
+  .np-expert-search__intro {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .np-expert-search__panel {
+    width: 100%;
+  }
+
+  /*
+   * Hace que el placeholder de imagen use toda la altura
+   * disponible de su columna, similar a company-story.
+   */
+  .np-expert-search__media {
+    display: flex;
+  }
+
+  .np-expert-search__media-placeholder {
+    flex: 1;
+
+    min-height: 100%;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-expert-search__field {
+    flex-wrap: wrap;
+
+    padding: var(--np-space-md);
+
+    border-radius: var(--np-radius-md);
+  }
+
+  .np-expert-search__submit {
+    width: 100%;
+  }
+
+  .np-expert-search__media-placeholder {
+    min-height: 240px;
+  }
 }
