@@ -5,41 +5,117 @@
    ========================================================================== */
 
 :root {
-  /* ---------------------------------------------------------------------
-     COLOR — Paleta principal (aproximada al branding de New Pig México)
-     --------------------------------------------------------------------- */
-  --np-color-primary: #0a2540;          /* Azul marino oscuro (header, footer top) */
-  --np-color-primary-dark: #071a30;     /* Azul marino aún más oscuro (hero bg) */
-  --np-color-secondary: #1f5fbf;        /* Azul corporativo (botones, links) */
-  --np-color-secondary-light: #eaf2fc;  /* Azul claro (fondos suaves) */
-  --np-color-accent: #ffc72c;           /* Amarillo de acento (CTA, etiquetas) */
-  --np-color-accent-dark: #e6ac00;      /* Amarillo hover */
+/* ---------------------------------------------------------------------
+   COLOR — New Pig Brand System
+   Fuente: Brand Guidelines oficiales
+   --------------------------------------------------------------------- */
 
-  --np-color-white: #ffffff;
-  --np-color-gray-light: #f4f6f8;       /* Fondos claros de sección */
-  --np-color-gray-medium: #d7dde3;      /* Bordes, separadores */
-  --np-color-gray-dark: #6b7480;        /* Texto secundario */
-  --np-color-footer: #1c2b3a;           /* Gris oscuro azulado del footer */
+/* =====================================================================
+   BRAND PRIMARY COLORS
+   ===================================================================== */
 
-  --np-color-text: #16232f;             /* Texto principal */
-  --np-color-muted: #5b6b7a;            /* Texto secundario / descripciones */
-  --np-color-on-dark: #f4f6f8;          /* Texto sobre fondos oscuros */
-  --np-color-on-dark-muted: #a9b6c4;    /* Texto secundario sobre fondos oscuros */
+--np-brand-black: #000000;
+--np-brand-craft: #ca9f74;
+--np-brand-dark-blue: #005370;
+--np-brand-light-gray: #e5e5e5;
+--np-brand-medium-gray: #999999;
+--np-brand-pig-blue: #0594ca;
+--np-brand-red: #d65026;
+--np-brand-white: #ffffff;
+--np-brand-yellow: #f3be17;
 
-  --np-color-background: #ffffff;
-  --np-color-surface: #ffffff;
-  --np-color-border: #e1e6eb;
+/* RGB channels — para transparencias */
+--np-brand-dark-blue-rgb: 0 83 112;
+--np-brand-pig-blue-rgb: 5 148 202;
+--np-brand-white-rgb: 255 255 255;
+--np-brand-medium-green-rgb: 0 179 136;
 
-  --np-color-success: #1f9d55;
-  --np-color-danger: #d64545;
+/* =====================================================================
+   BRAND SECONDARY COLORS
+   Uso limitado / contextual
+   ===================================================================== */
 
-  /* ---------------------------------------------------------------------
-     SOMBRAS
-     --------------------------------------------------------------------- */
-  --np-shadow-sm: 0 1px 2px rgba(10, 37, 64, 0.06);
-  --np-shadow-md: 0 4px 12px rgba(10, 37, 64, 0.10);
-  --np-shadow-lg: 0 12px 32px rgba(10, 37, 64, 0.16);
-  --np-shadow-focus: 0 0 0 3px rgba(31, 95, 191, 0.35);
+/* Absorbents */
+--np-brand-hazmat: #ed008c;
+--np-brand-oil-only: #15a8ab;
+--np-brand-universal: #0594ca;
+
+/* Featured resources */
+--np-brand-buttery-yellow: #f2c75c;
+--np-brand-dark-gold: #d2942a;
+--np-brand-salmon: #f8a07c;
+
+/* Additional colors */
+--np-brand-medium-green: #00b388;
+--np-brand-new-red: #d90000;
+--np-brand-safety-yellow: #ffe100;
+
+/* =====================================================================
+   SEMANTIC UI COLORS
+
+   Estos son los tokens que deben consumir los componentes.
+   No usar directamente los --np-brand-* salvo casos especiales.
+   ===================================================================== */
+
+/* Identidad principal */
+--np-color-primary: var(--np-brand-dark-blue);
+--np-color-primary-dark: #003d53;
+
+--np-color-secondary: var(--np-brand-pig-blue);
+--np-color-secondary-light: #e8f6fb;
+
+--np-color-accent: var(--np-brand-yellow);
+--np-color-accent-dark: #d6a500;
+
+/* Neutrales */
+--np-color-white: var(--np-brand-white);
+
+--np-color-gray-light: var(--np-brand-light-gray);
+--np-color-gray-medium: var(--np-brand-medium-gray);
+--np-color-gray-dark: #666666;
+
+/* Texto */
+--np-color-text: var(--np-brand-black);
+--np-color-muted: #666666;
+
+/* Texto sobre fondos oscuros */
+--np-color-on-dark: var(--np-brand-white);
+--np-color-on-dark-muted: #d9e1e4;
+
+/* Superficies */
+--np-color-background: var(--np-brand-white);
+--np-color-surface: var(--np-brand-white);
+
+/*
+ * El manual especifica #979797 como borde de White.
+ * Lo utilizamos como referencia del sistema de bordes.
+ */
+--np-color-border: #979797;
+
+/* Footer */
+--np-color-footer: var(--np-brand-dark-blue);
+
+/* Estados */
+--np-color-success: var(--np-brand-medium-green);
+--np-color-danger: var(--np-brand-new-red);
+--np-color-warning: var(--np-brand-safety-yellow);
+
+/* ---------------------------------------------------------------------
+   SOMBRAS
+   Basadas en Dark Blue y Pig Blue oficiales.
+   --------------------------------------------------------------------- */
+
+--np-shadow-sm:
+  0 1px 2px rgb(var(--np-brand-dark-blue-rgb) / 6%);
+
+--np-shadow-md:
+  0 4px 12px rgb(var(--np-brand-dark-blue-rgb) / 10%);
+
+--np-shadow-lg:
+  0 12px 32px rgb(var(--np-brand-dark-blue-rgb) / 16%);
+
+--np-shadow-focus:
+  0 0 0 3px rgb(var(--np-brand-pig-blue-rgb) / 35%);
 
 /* ---------------------------------------------------------------------
    TIPOGRAFÍA — New Pig Brand System
