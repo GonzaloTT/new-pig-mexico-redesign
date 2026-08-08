@@ -41,29 +41,71 @@
   --np-shadow-lg: 0 12px 32px rgba(10, 37, 64, 0.16);
   --np-shadow-focus: 0 0 0 3px rgba(31, 95, 191, 0.35);
 
-  /* ---------------------------------------------------------------------
-     TIPOGRAFÍA
-     --------------------------------------------------------------------- */
-  --np-font-family-base: Arial, Helvetica, sans-serif;
+/* ---------------------------------------------------------------------
+   TIPOGRAFÍA — New Pig Brand System
+   --------------------------------------------------------------------- */
 
-  --np-font-size-xs: 0.75rem;
-  --np-font-size-sm: 0.875rem;
-  --np-font-size-base: 1rem;
-  --np-font-size-md: 1.125rem;
-  --np-font-size-lg: 1.25rem;
-  --np-font-size-xl: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
-  --np-font-size-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
-  --np-font-size-3xl: clamp(2.1rem, 1.6rem + 2.4vw, 3.25rem);
+/*
+ * DISPLAY
+ * Manual de marca: DIN Condensed Bold (700)
+ *
+ * DIN Condensed requiere licencia/webfont oficial.
+ * Mientras no exista el recurso oficial del cliente, usamos un fallback
+ * condensado del sistema. No se intenta sustituir ni renombrar una fuente
+ * distinta como DIN Condensed.
+ */
+--np-font-family-display:
+  'Arial Narrow',
+  'Roboto Condensed',
+  Arial,
+  sans-serif;
 
-  --np-font-weight-regular: 400;
-  --np-font-weight-medium: 500;
-  --np-font-weight-bold: 700;
-  --np-font-weight-black: 900;
+/*
+ * HEADINGS / SUBHEADS
+ * Manual de marca:
+ * Bitter Bold (700)
+ * Bitter Regular (400)
+ */
+--np-font-family-heading:
+  'Bitter',
+  Georgia,
+  serif;
 
-  --np-line-height-tight: 1.15;
-  --np-line-height-snug: 1.35;
-  --np-line-height-base: 1.55;
-  --np-line-height-relaxed: 1.7;
+/*
+ * BODY / UI
+ * Manual de marca:
+ * Open Sans Regular (400)
+ * Open Sans Bold (700)
+ */
+--np-font-family-body:
+  'Open Sans',
+  Arial,
+  Helvetica,
+  sans-serif;
+
+/* Compatibilidad con estilos existentes */
+--np-font-family-base: var(--np-font-family-body);
+
+/* Tamaños */
+--np-font-size-xs: 0.75rem;
+--np-font-size-sm: 0.875rem;
+--np-font-size-base: 1rem;
+--np-font-size-md: 1.125rem;
+--np-font-size-lg: 1.25rem;
+--np-font-size-xl: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+--np-font-size-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+--np-font-size-3xl: clamp(2.1rem, 1.6rem + 2.4vw, 3.25rem);
+
+/* Pesos oficiales utilizados por la marca */
+--np-font-weight-regular: 400;
+--np-font-weight-medium: 500;
+--np-font-weight-bold: 700;
+
+/* Line heights */
+--np-line-height-tight: 1.15;
+--np-line-height-snug: 1.35;
+--np-line-height-base: 1.55;
+--np-line-height-relaxed: 1.7;
 
   /* ---------------------------------------------------------------------
      ESPACIADO

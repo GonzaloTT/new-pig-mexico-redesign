@@ -34,7 +34,7 @@
 
 .np-footer__brand-name {
   font-size: var(--np-font-size-lg);
-  font-weight: var(--np-font-weight-black);
+  font-weight: var(--np-font-weight-bold);
   color: var(--np-color-on-dark);
   margin-bottom: var(--np-space-sm);
 }
