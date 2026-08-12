@@ -64,13 +64,22 @@
 }
 
 .np-hero__title {
-  color: var(--np-color-on-dark);
+  font-family: var(--np-font-family-display);
   font-size: var(--np-font-size-3xl);
+  font-weight: var(--np-font-weight-bold);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  color: var(--np-color-on-dark);
 }
 
 .np-hero__description {
   max-width: 46ch;
+
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-md);
+  font-weight: var(--np-font-weight-regular);
 }
 
 .np-hero__actions {
@@ -164,16 +173,23 @@
 
 .np-hero__sidebar-title {
   margin-bottom: 4px;
-  color: var(--np-color-on-dark);
+
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-base);
   font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-on-dark);
+
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 .np-hero__sidebar-text {
-  color: var(--np-color-on-dark-muted);
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-regular);
+
+  color: var(--np-color-on-dark-muted);
   line-height: var(--np-line-height-snug);
 }
 

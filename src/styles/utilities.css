@@ -146,13 +146,13 @@
 }
 
 .np-form-message[data-variant="success"] {
-  background-color: rgba(31, 157, 85, 0.12);
+  background-color: rgb(var(--np-brand-medium-green-rgb) / 12%);
   color: var(--np-color-success);
-  border: 1px solid rgba(31, 157, 85, 0.35);
+  border: 1px solid rgb(var(--np-brand-medium-green-rgb) / 35%);
 }
 
 .np-form-message[data-variant="info"] {
-  background-color: rgba(31, 95, 191, 0.12);
+  background-color: rgb(var(--np-brand-pig-blue-rgb) / 12%);
   color: var(--np-color-secondary);
-  border: 1px solid rgba(31, 95, 191, 0.35);
+  border: 1px solid rgb(var(--np-brand-pig-blue-rgb) / 35%);
 }

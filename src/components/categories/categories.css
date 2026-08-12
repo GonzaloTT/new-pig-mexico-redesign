@@ -31,8 +31,10 @@
   align-items: center;
   gap: var(--np-space-2xs);
 
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-bold);
+  font-weight: var(--np-font-weight-regular);
+
   color: var(--np-color-secondary);
 
   white-space: nowrap;
@@ -138,8 +140,10 @@
 }
 
 .np-category-card__title {
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-sm);
   font-weight: var(--np-font-weight-bold);
+
   color: var(--np-color-primary);
   line-height: var(--np-line-height-snug);
 

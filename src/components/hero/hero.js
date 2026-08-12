@@ -18,6 +18,7 @@ export function createHero() {
           <p class="np-eyebrow">— Nueva línea —</p>
           <h1 id="np-hero-title" class="np-hero__title">
             Derrames pequeños.
+            <br>
             <span class="np-text-accent">Nuestra misión.</span>
           </h1>
           <p class="np-hero__description np-text-muted-on-dark">

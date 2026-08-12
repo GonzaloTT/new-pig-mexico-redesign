@@ -93,15 +93,19 @@
 }
 
 .np-header__brand-name {
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-md);
-  font-weight: var(--np-font-weight-black);
+  font-weight: var(--np-font-weight-bold);
+
   color: var(--np-color-text);
 }
 
 .np-header__brand-tagline {
+  font-family: var(--np-font-family-body);
   font-size: 0.7rem;
+  font-weight: var(--np-font-weight-regular);
+
   color: var(--np-color-secondary);
-  font-weight: var(--np-font-weight-medium);
 }
 
 @media (max-width: 599px) {
@@ -133,10 +137,14 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-medium);
-  color: var(--np-color-text);
+
   padding-block: var(--np-space-xs);
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-regular);
+
+  color: var(--np-color-text);
 }
 
 .np-header__nav-link:hover,
@@ -297,10 +305,15 @@
 
 .np-header__mobile-nav-link {
   display: block;
+
   padding: var(--np-space-sm) var(--np-space-xs);
+
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-md);
-  font-weight: var(--np-font-weight-medium);
+  font-weight: var(--np-font-weight-regular);
+
   border-bottom: 1px solid var(--np-color-border);
+
   color: var(--np-color-text);
 }
 
@@ -319,10 +332,14 @@
 .np-header__overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(10, 37, 64, 0.5);
+
+  background-color:
+  rgb(var(--np-brand-dark-blue-rgb) / 50%);
+
   z-index: var(--np-z-overlay);
   opacity: 0;
   pointer-events: none;
+
   transition: opacity var(--np-transition-base);
 }
 

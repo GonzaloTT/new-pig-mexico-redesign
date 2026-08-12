@@ -71,14 +71,21 @@
 }
 
 .np-company-story__metric-value {
+  font-family: var(--np-font-family-heading);
   font-size: var(--np-font-size-xl);
-  font-weight: var(--np-font-weight-black);
+  font-weight: var(--np-font-weight-bold);
+
   color: var(--np-color-primary);
+
   line-height: 1.1;
 }
 
 .np-company-story__metric-label {
-  font-size: var(--np-font-size-sm);
-  color: var(--np-color-muted);
   margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-regular);
+
+  color: var(--np-color-muted);
 }

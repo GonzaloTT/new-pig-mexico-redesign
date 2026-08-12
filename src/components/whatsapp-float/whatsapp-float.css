@@ -19,15 +19,15 @@
   min-height: 58px;
   padding: 0.65rem 1.1rem 0.65rem 0.7rem;
 
-  border: 1px solid rgb(255 255 255 / 35%);
+  border: 1px solid rgb(var(--np-brand-white-rgb) / 35%);
   border-radius: var(--np-radius-full);
 
   background-color: #20b858;
-  color: var(--np-color-white);
+  color: rgb(var(--np-brand-white-rgb) / 90%);
 
-  box-shadow:
-    0 8px 24px rgb(10 37 64 / 18%),
-    0 2px 8px rgb(10 37 64 / 12%);
+box-shadow:
+  0 8px 24px rgb(var(--np-brand-dark-blue-rgb) / 18%),
+  0 2px 8px rgb(var(--np-brand-dark-blue-rgb) / 12%);
 
   text-decoration: none;
 
@@ -43,13 +43,13 @@
   /* Conservamos el translateY para no perder el centrado vertical */
   transform: translateY(-50%) scale(1.03);
 
-  box-shadow:
-    0 12px 28px rgb(10 37 64 / 22%),
-    0 4px 10px rgb(10 37 64 / 14%);
+box-shadow:
+  0 12px 28px rgb(var(--np-brand-dark-blue-rgb) / 22%),
+  0 4px 10px rgb(var(--np-brand-dark-blue-rgb) / 14%);
 }
 
 .np-whatsapp-float:focus-visible {
-  outline: 3px solid rgb(31 95 191 / 45%);
+  outline: 3px solid rgb(var(--np-brand-pig-blue-rgb) / 45%);
   outline-offset: 4px;
 }
 

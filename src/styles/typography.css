@@ -1,16 +1,36 @@
 /* ==========================================================================
    TYPOGRAPHY.CSS
-   Jerarquía tipográfica global.
+   Sistema tipográfico basado en el Brand Guide de New Pig.
+
+   ONLINE FONTS:
+   - DIN Condensed Bold: graphic headlines, ALL CAPS.
+   - Bitter Bold: subheads, headlines, pull quotes.
+   - Bitter Regular: hierarchy / secondary editorial text.
+   - Open Sans Bold: buttons, kickers, emphasized text.
+   - Open Sans Regular: body text and hyperlinks.
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   Fuentes web disponibles
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
 body {
-  font-family: var(--np-font-family-base);
+  font-family: var(--np-font-family-body);
   font-size: var(--np-font-size-base);
   font-weight: var(--np-font-weight-regular);
   line-height: var(--np-line-height-base);
+
   color: var(--np-color-text);
   background-color: var(--np-color-background);
 }
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
 
 h1,
 h2,
@@ -18,57 +38,130 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
   font-weight: var(--np-font-weight-bold);
   line-height: var(--np-line-height-tight);
+
   color: var(--np-color-text);
 }
 
+/*
+ * Los titulares gráficos principales son el lugar reservado
+ * para DIN Condensed Bold según el manual de marca.
+ */
 h1 {
+  font-family: var(--np-font-family-display);
+
   font-size: var(--np-font-size-3xl);
-  font-weight: var(--np-font-weight-black);
-  letter-spacing: -0.01em;
+  font-weight: var(--np-font-weight-bold);
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
 }
 
+/*
+ * Headline/subhead editorial:
+ * Bitter Bold
+ */
 h2 {
   font-size: var(--np-font-size-2xl);
-  letter-spacing: -0.01em;
+
+  letter-spacing: 0;
 }
 
 h3 {
   font-size: var(--np-font-size-xl);
+
+  letter-spacing: 0;
 }
 
 h4 {
   font-size: var(--np-font-size-lg);
 }
 
+/* --------------------------------------------------------------------------
+   Body
+   -------------------------------------------------------------------------- */
+
 p {
+  font-family: var(--np-font-family-body);
+
   font-size: var(--np-font-size-base);
+  font-weight: var(--np-font-weight-regular);
+
   line-height: var(--np-line-height-relaxed);
+
   color: var(--np-color-muted);
 }
 
 small {
+  font-family: var(--np-font-family-body);
+
   font-size: var(--np-font-size-xs);
 }
 
-strong {
+/* --------------------------------------------------------------------------
+   Emphasis
+   -------------------------------------------------------------------------- */
+
+strong,
+b {
+  font-family: var(--np-font-family-body);
+
   font-weight: var(--np-font-weight-bold);
 }
 
+/* --------------------------------------------------------------------------
+   Links
+   Manual: Open Sans Regular para hyperlinks.
+   -------------------------------------------------------------------------- */
+
 a {
+  font-family: var(--np-font-family-body);
+  font-weight: var(--np-font-weight-regular);
+
   transition: color var(--np-transition-fast);
 }
 
-/* Utilidad tipográfica: eyebrow (texto pequeño superior, ej. "NUEVA LÍNEA") */
+/* --------------------------------------------------------------------------
+   UI
+   Inputs y controles usan Open Sans.
+   -------------------------------------------------------------------------- */
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--np-font-family-body);
+}
+
+/* --------------------------------------------------------------------------
+   Kicker / Eyebrow
+   Manual: Open Sans Bold.
+   -------------------------------------------------------------------------- */
+
 .np-eyebrow {
   display: inline-block;
+
+  font-family: var(--np-font-family-body);
+
   font-size: var(--np-font-size-sm);
   font-weight: var(--np-font-weight-bold);
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   color: var(--np-color-accent);
 }
+
+/* --------------------------------------------------------------------------
+   Helpers
+   -------------------------------------------------------------------------- */
 
 .np-text-accent {
   color: var(--np-color-accent);
@@ -80,4 +173,40 @@ a {
 
 .np-text-muted-on-dark {
   color: var(--np-color-on-dark-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Clases de utilidad explícitas para roles de marca
+   -------------------------------------------------------------------------- */
+
+/*
+ * Titular gráfico.
+ * Debe escribirse en mayúsculas según el manual.
+ */
+.np-type-display {
+  font-family: var(--np-font-family-display);
+  font-weight: var(--np-font-weight-bold);
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+}
+
+/* Bitter Bold */
+.np-type-heading {
+  font-family: var(--np-font-family-heading);
+  font-weight: var(--np-font-weight-bold);
+}
+
+/* Bitter Regular */
+.np-type-editorial {
+  font-family: var(--np-font-family-heading);
+  font-weight: var(--np-font-weight-regular);
+}
+
+/* Open Sans */
+.np-type-body {
+  font-family: var(--np-font-family-body);
 }
