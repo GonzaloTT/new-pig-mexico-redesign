@@ -45,6 +45,10 @@ function renderCategoryCard(category) {
       class="np-category-card"
       aria-label="Ver categoría ${category.title}"
     >
+      <span class="np-category-card__title">
+        ${category.title}
+      </span>
+
       <span class="np-category-card__visual">
         <img
           src="${category.image}"
@@ -52,10 +56,6 @@ function renderCategoryCard(category) {
           class="np-category-card__image"
           loading="lazy"
         />
-      </span>
-
-      <span class="np-category-card__title">
-        ${category.title}
       </span>
     </a>
   `;
