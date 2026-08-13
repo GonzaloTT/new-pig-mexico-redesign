@@ -1,4 +1,5 @@
 import './company-story.css';
+const BASE_URL = import.meta.env.BASE_URL;
 
 /**
  * createCompanyStory
@@ -16,7 +17,7 @@ export function createCompanyStory() {
         <div class="np-company-story__media">
           <div class="np-company-story__image-wrapper">
             <img
-              src="/images/company-story/company-story-team.png"
+              src="${BASE_URL}images/company-story/company-story-team.png"
               alt="Equipo de New Pig México"
               class="np-company-story__image"
               loading="lazy"

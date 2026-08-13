@@ -1,4 +1,5 @@
 import './header.css';
+const BASE_URL = import.meta.env.BASE_URL;
 
 /**
  * createHeader
@@ -31,7 +32,7 @@ export function createHeader() {
           <a href="#" class="np-header__brand" aria-label="New Pig México, ir al inicio">
             <span class="np-header__logo">
             <img
-              src="/images/logos/logo-new-pig-mexico.png"
+              src="${BASE_URL}images/logos/logo-new-pig-mexico.png"
               alt="New Pig México"
               class="np-header__logo-image"
             >
