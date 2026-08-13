@@ -8,57 +8,48 @@
 
 export const categories = [
   {
-    id: 'tapetes-absorbentes',
     title: 'Tapetes Absorbentes',
-    icon: 'mat',
+    image: '/images/categories/tapetes-absorbentes.png',
     href: '#'
   },
   {
-    id: 'trapos-industriales',
-    title: 'Trapos e Industriales',
-    icon: 'rags',
+    title: 'Trapos Industriales',
+    image: '/images/categories/trapos-industriales.png',
     href: '#'
   },
   {
-    id: 'seguridad-pisos',
     title: 'Seguridad en Pisos',
-    icon: 'floor-sign',
+    image: '/images/categories/seguridad-pisos.png',
     href: '#'
   },
   {
-    id: 'absorbentes',
     title: 'Absorbentes',
-    icon: 'sheets',
+    image: '/images/categories/absorbentes.png',
     href: '#'
   },
   {
-    id: 'kits-derrames',
     title: 'Kits para Derrames',
-    icon: 'kit',
+    image: '/images/categories/kits-derrames.png',
     href: '#'
   },
   {
-    id: 'proteccion-drenajes',
     title: 'Protección de Drenajes',
-    icon: 'drain',
+    image: '/images/categories/proteccion-drenajes.png',
     href: '#'
   },
   {
-    id: 'seguridad-mantenimiento',
     title: 'Seguridad y Mantenimiento',
-    icon: 'helmet',
+    image: '/images/categories/seguridad-mantenimiento.png',
     href: '#'
   },
   {
-    id: 'almacenamiento-envio',
     title: 'Almacenamiento y Envío',
-    icon: 'cabinet',
+    image: '/images/categories/almacenamiento-envio.png',
     href: '#'
   },
   {
-    id: 'control-derrames-contencion',
     title: 'Control de Derrames y Contención',
-    icon: 'drum',
+    image: '/images/categories/control-derrames-contencion.png',
     href: '#'
   }
 ];
