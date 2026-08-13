@@ -4,33 +4,27 @@
 
 .np-hero {
   position: relative;
+
   color: var(--np-color-on-dark);
+
   padding-block: var(--np-space-2xl);
+
   overflow: hidden;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(6, 22, 40, 0.92) 0%,
-      rgba(6, 22, 40, 0.72) 42%,
-      rgba(6, 22, 40, 0.28) 72%,
-      rgba(6, 22, 40, 0.18) 100%
+      rgb(var(--np-brand-dark-blue-rgb) / 90%) 0%,
+      rgb(var(--np-brand-dark-blue-rgb) / 72%) 28%,
+      rgb(var(--np-brand-dark-blue-rgb) / 28%) 52%,
+      rgb(var(--np-brand-dark-blue-rgb) / 10%) 70%,
+      rgb(var(--np-brand-dark-blue-rgb) / 15%) 100%
     ),
-    url('/images/hero/hero-new-pig.jpg');
+    url('/images/hero/hero-new-pig.png');
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.np-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(10, 37, 64, 0.4), rgba(10, 37, 64, 0.4)),
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0 2px, transparent 2px 40px);
-  pointer-events: none;
 }
 
 .np-hero__inner {
@@ -44,9 +38,9 @@
 @media (min-width: 1024px) {
   .np-hero__inner {
     grid-template-columns:
-      minmax(360px, 1.15fr)
-      minmax(280px, 1fr)
-      minmax(280px, 0.8fr);
+      minmax(360px, 1.1fr)
+      minmax(380px, 1.4fr)
+      minmax(280px, 0.85fr);
 
     gap: var(--np-space-xl);
   }
@@ -104,24 +98,7 @@
 
 /* --- Visual (center) --- */
 .np-hero__visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.np-hero__visual-frame {
-  width: 100%;
-  max-width: 380px;
-  aspect-ratio: 1 / 1;
-  border-radius: var(--np-radius-lg);
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: var(--np-space-lg);
-}
-
-.np-hero__visual-svg {
-  width: 100%;
-  height: 100%;
+  min-height: 360px;
 }
 
 /* --- Sidebar (right) --- */
@@ -133,8 +110,8 @@
 
   min-height: 360px;
 
-  background-color: rgba(6, 22, 40, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgb(var(--np-brand-dark-blue-rgb) / 86%);
+  border: 1px solid rgb(var(--np-brand-white-rgb) / 12%);
   border-radius: var(--np-radius-lg);
   padding: var(--np-space-xl);
 }
@@ -147,11 +124,12 @@
 
 .np-hero__sidebar-item:not(:last-child) {
   padding-bottom: var(--np-space-md);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(var(--np-brand-white-rgb) / 12%);
 }
 
 .np-hero__sidebar-icon {
   flex-shrink: 0;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -159,10 +137,14 @@
   width: 52px;
   height: 52px;
 
-  border: 1px solid rgba(31, 95, 191, 0.5);
+  border:
+    1px solid rgb(var(--np-brand-pig-blue-rgb) / 55%);
+
   border-radius: 50%;
 
-  background-color: rgba(31, 95, 191, 0.24);
+  background-color:
+    rgb(var(--np-brand-pig-blue-rgb) / 22%);
+
   color: var(--np-color-secondary);
 }
 

@@ -37,9 +37,7 @@ export function createHero() {
           </div>
         </div>
 
-        <div class="np-hero__visual" aria-hidden="true">
-          ${heroVisualPlaceholder()}
-        </div>
+        <div class="np-hero__visual" aria-hidden="true"></div>
 
         <aside class="np-hero__sidebar" aria-label="Beneficios destacados">
           ${heroSidebarItem('shield', 'Protege', 'al personal, equipos e instalaciones.')}
@@ -49,40 +47,6 @@ export function createHero() {
         </aside>
       </div>
     </section>
-  `;
-}
-
-/* ---------------------------------------------------------------------
-   Placeholder visual — composición de "productos" hecha con formas
-   CSS/SVG locales. No usa imágenes externas.
-   --------------------------------------------------------------------- */
-function heroVisualPlaceholder() {
-  return `
-    <div class="np-hero__visual-frame">
-      <svg viewBox="0 0 320 320" class="np-hero__visual-svg" role="img" aria-label="Composición ilustrativa de productos de contención de derrames">
-        <defs>
-          <linearGradient id="np-hero-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#2f6fce"/>
-            <stop offset="100%" stop-color="#123a6b"/>
-          </linearGradient>
-        </defs>
-        <circle cx="160" cy="160" r="150" fill="url(#np-hero-grad)" opacity="0.25"/>
-        <!-- Silueta simplificada de "mascota" tipo cerdo, geometría básica -->
-        <ellipse cx="160" cy="190" rx="95" ry="70" fill="#f6c9d1"/>
-        <circle cx="230" cy="150" r="45" fill="#f6c9d1"/>
-        <ellipse cx="248" cy="140" rx="8" ry="12" fill="#f6c9d1"/>
-        <ellipse cx="255" cy="160" rx="18" ry="14" fill="#e79aa8"/>
-        <circle cx="215" cy="140" r="4" fill="#3a2a2a"/>
-        <circle cx="245" cy="140" r="4" fill="#3a2a2a"/>
-        <!-- Gafas de seguridad -->
-        <rect x="205" y="130" width="55" height="16" rx="8" fill="var(--np-color-accent)" opacity="0.9"/>
-        <!-- Contenedor / cubeta amarilla -->
-        <rect x="60" y="210" width="70" height="55" rx="6" fill="var(--np-color-accent)"/>
-        <text x="95" y="242" text-anchor="middle" font-size="11" font-weight="700" fill="#123a6b">HAZ-MAT</text>
-        <!-- Tapete absorbente -->
-        <rect x="20" y="270" width="280" height="26" rx="4" fill="#dfe6ec" opacity="0.85"/>
-      </svg>
-    </div>
   `;
 }
 
