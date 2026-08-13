@@ -14,8 +14,13 @@ export function createCompanyStory() {
     <section class="np-company-story np-section np-section--gray" aria-labelledby="np-company-story-title">
       <div class="np-container np-company-story__grid">
         <div class="np-company-story__media">
-          <div class="np-company-story__image-placeholder" role="img" aria-label="Fotografía del equipo de New Pig México frente a sus oficinas">
-            ${teamPlaceholderSvg()}
+          <div class="np-company-story__image-wrapper">
+            <img
+              src="/images/company-story/company-story-team.png"
+              alt="Equipo de New Pig México"
+              class="np-company-story__image"
+              loading="lazy"
+            />
           </div>
           <span class="np-badge np-company-story__badge">
             ${iconGlobe()}
@@ -50,26 +55,7 @@ export function createCompanyStory() {
   `;
 }
 
-function teamPlaceholderSvg() {
-  return `
-    <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
-      <rect width="480" height="320" fill="#dbe6f0"/>
-      <rect x="0" y="220" width="480" height="100" fill="#c3d4e6"/>
-      <rect x="40" y="60" width="120" height="140" fill="#ffffff" opacity="0.6"/>
-      <rect x="320" y="60" width="120" height="140" fill="#ffffff" opacity="0.6"/>
-      <g fill="#0a2540">
-        <circle cx="150" cy="230" r="22"/>
-        <rect x="132" y="252" width="36" height="60" rx="10"/>
-        <circle cx="205" cy="220" r="24"/>
-        <rect x="185" y="244" width="40" height="66" rx="10"/>
-        <circle cx="265" cy="220" r="24"/>
-        <rect x="245" y="244" width="40" height="66" rx="10"/>
-        <circle cx="325" cy="230" r="22"/>
-        <rect x="307" y="252" width="36" height="60" rx="10"/>
-      </g>
-    </svg>
-  `;
-}
+
 
 function iconGlobe() {
   return `

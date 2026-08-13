@@ -19,18 +19,25 @@
   position: relative;
 }
 
-.np-company-story__image-placeholder {
+.np-company-story__image-wrapper {
   width: 100%;
   aspect-ratio: 3 / 2;
-  border-radius: var(--np-radius-lg);
+
   overflow: hidden;
+
+  border-radius: var(--np-radius-lg);
+
   box-shadow: var(--np-shadow-md);
 }
 
-.np-company-story__image-placeholder svg {
+.np-company-story__image {
+  display: block;
+
   width: 100%;
   height: 100%;
-  display: block;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .np-company-story__badge {
