@@ -23,8 +23,33 @@
     url('/images/hero/hero-new-pig.png');
 
   background-size: cover;
-  background-position: center;
+  background-position: center 65%;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .np-hero {
+    background-position: center 68%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .np-hero {
+    background-position: 48% 68%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .np-hero {
+    background-position: 42% center;
+  }
+}
+
+@media (max-width: 599px) {
+  .np-hero {
+    background-position: 35% center;
+    padding-block: var(--np-space-xl);
+  }
 }
 
 .np-hero__inner {
@@ -35,18 +60,32 @@
   align-items: center;
 }
 
+/* --- Visual (center) --- */
+.np-hero__visual {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .np-hero__inner {
     grid-template-columns:
-      minmax(360px, 1.1fr)
-      minmax(380px, 1.4fr)
-      minmax(280px, 0.85fr);
+      minmax(320px, 1fr)
+      minmax(260px, 1.35fr)
+      minmax(280px, 0.8fr);
 
     gap: var(--np-space-xl);
   }
 
+  .np-hero__visual {
+    display: block;
+    min-height: 360px;
+  }
+
   .np-hero__sidebar {
+    grid-column: 3;
     align-self: stretch;
+    justify-self: end;
+    width: 100%;
+    max-width: 340px;
   }
 }
 
@@ -94,11 +133,6 @@
     align-items: center;
     flex-wrap: nowrap;
   }
-}
-
-/* --- Visual (center) --- */
-.np-hero__visual {
-  min-height: 360px;
 }
 
 /* --- Sidebar (right) --- */
@@ -184,5 +218,20 @@
   .np-hero__sidebar-item {
     flex: 1 1 45%;
     min-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .np-hero__sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .np-hero__sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    min-height: auto;
   }
 }

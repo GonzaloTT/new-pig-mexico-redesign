@@ -40,10 +40,10 @@ export function createHero() {
         <div class="np-hero__visual" aria-hidden="true"></div>
 
         <aside class="np-hero__sidebar" aria-label="Beneficios destacados">
-          ${heroSidebarItem('shield', 'Protege', 'al personal, equipos e instalaciones.')}
-          ${heroSidebarItem('check-circle', 'Cumple', 'con normas y regulaciones ambientales.')}
-          ${heroSidebarItem('dollar', 'Ahorra', 'tiempo, dinero y recursos en limpieza.')}
-          ${heroSidebarItem('leaf', 'Sostenible', 'soluciones responsables con el medio ambiente.')}
+          ${heroSidebarItem('shield', 'Protege', 'Al personal, equipos e instalaciones.')}
+          ${heroSidebarItem('check-circle', 'Cumple', 'Con normas y regulaciones ambientales.')}
+          ${heroSidebarItem('dollar', 'Ahorra', 'Tiempo, dinero y recursos en limpieza.')}
+          ${heroSidebarItem('leaf', 'Sostenible', 'Soluciones responsables con el medio ambiente.')}
         </aside>
       </div>
     </section>
