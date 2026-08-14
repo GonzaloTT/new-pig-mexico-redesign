@@ -58,20 +58,17 @@ box-shadow:
   align-items: center;
   justify-content: center;
 
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
-
-  border: 2px solid currentColor;
-  border-radius: 50%;
 
   color: var(--np-color-white);
 }
 
 .np-whatsapp-float__icon svg {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 42px;
+  height: 42px;
 }
 
 .np-whatsapp-float__content {
