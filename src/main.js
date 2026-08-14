@@ -30,6 +30,7 @@ import { createFooter } from './components/footer/footer.js';
 
 // Scripts de comportamiento
 import { initNavigation } from './scripts/navigation.js';
+import { initHeroCarousel } from './scripts/hero-carousel.js';
 import { initForms } from './scripts/forms.js';
 
 // Componentes whatsapp-float
@@ -61,6 +62,7 @@ function bootstrap() {
 
   renderHome(root);
   initNavigation();
+  initHeroCarousel();
   initForms();
 }
 

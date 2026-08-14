@@ -11,6 +11,25 @@
 
   overflow: hidden;
 
+  /* Fallback mientras carga la primera imagen */
+  background-color: var(--np-color-primary);
+}
+
+.np-hero__backgrounds {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.np-hero__background {
+  position: absolute;
+  inset: 0;
+
   background-image:
     linear-gradient(
       90deg,
@@ -20,44 +39,154 @@
       rgb(var(--np-brand-dark-blue-rgb) / 10%) 70%,
       rgb(var(--np-brand-dark-blue-rgb) / 15%) 100%
     ),
-    url('/images/hero/hero-new-pig.png');
+    var(--np-hero-bg-image);
 
   background-size: cover;
   background-position: center 65%;
   background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transition:
+    opacity 900ms ease;
+
+  will-change: opacity;
+}
+
+.np-hero__background--active {
+  opacity: 1;
 }
 
 @media (min-width: 1200px) and (max-width: 1439px) {
-  .np-hero {
+  .np-hero__background {
     background-position: center 68%;
   }
 }
 
 @media (min-width: 900px) and (max-width: 1199px) {
-  .np-hero {
+  .np-hero__background {
     background-position: 48% 68%;
   }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .np-hero {
+  .np-hero__background {
     background-position: 42% center;
   }
 }
 
 @media (max-width: 599px) {
   .np-hero {
-    background-position: 35% center;
     padding-block: var(--np-space-xl);
+  }
+
+  .np-hero__background {
+    background-position: 35% center;
   }
 }
 
 .np-hero__inner {
   position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--np-space-xl);
   align-items: center;
+}
+
+/* ==========================================================================
+   CAROUSEL CONTROLS
+   ========================================================================== */
+
+.np-hero__carousel-controls {
+  position: absolute;
+
+  left: 50%;
+  bottom: var(--np-space-sm);
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--np-space-xs);
+
+  transform: translateX(-50%);
+}
+
+.np-hero__carousel-indicator {
+  width: 10px;
+  height: 10px;
+
+  padding: 0;
+
+  border: 1px solid
+    rgb(var(--np-brand-white-rgb) / 80%);
+
+  border-radius: 50%;
+
+  background-color:
+    rgb(var(--np-brand-white-rgb) / 35%);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--np-transition-fast),
+    transform var(--np-transition-fast);
+}
+
+.np-hero__carousel-indicator:hover,
+.np-hero__carousel-indicator:focus-visible {
+  background-color: var(--np-color-white);
+
+  transform: scale(1.15);
+}
+
+.np-hero__carousel-indicator[aria-current="true"] {
+  background-color: var(--np-color-accent);
+
+  border-color: var(--np-color-accent);
+
+  transform: scale(1.2);
+}
+
+@media (max-width: 599px) {
+  .np-hero__carousel-controls {
+    bottom: var(--np-space-xs);
+  }
+
+  .np-hero__carousel-indicator {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.np-hero__primary-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--np-space-md);
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+
+  transition:
+    opacity 450ms ease,
+    transform 450ms ease,
+    visibility 450ms ease;
+}
+
+.np-hero[data-show-content="false"]
+.np-hero__primary-content {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-8px);
+
+  pointer-events: none;
 }
 
 /* --- Visual (center) --- */
@@ -148,6 +277,26 @@
   border: 1px solid rgb(var(--np-brand-white-rgb) / 12%);
   border-radius: var(--np-radius-lg);
   padding: var(--np-space-xl);
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+
+  transition:
+    opacity 450ms ease,
+    transform 450ms ease,
+    visibility 450ms ease;
+}
+
+/* Ocultar sidebar en slides promocionales */
+.np-hero[data-show-sidebar="false"] .np-hero__sidebar {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(12px);
+
+  pointer-events: none;
 }
 
 .np-hero__sidebar-item {
@@ -233,5 +382,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .np-hero__background,
+  .np-hero__primary-content,
+  .np-hero__sidebar,
+  .np-hero__carousel-indicator {
+    transition: none;
   }
 }

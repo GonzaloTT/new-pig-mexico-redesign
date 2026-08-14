@@ -12,40 +12,129 @@ import './hero.css';
  */
 export function createHero() {
   return `
-    <section class="np-hero" aria-labelledby="np-hero-title">
+    <section
+      class="np-hero"
+      aria-labelledby="np-hero-title"
+      data-hero-carousel
+      data-show-content="true"
+      data-show-sidebar="true"
+    >
+
+      <!-- ============================================================
+           Capas visuales del carrusel
+           Dos layers permiten hacer crossfade entre imágenes.
+           ============================================================ -->
+      <div class="np-hero__backgrounds" aria-hidden="true">
+        <div
+          class="np-hero__background np-hero__background--active"
+          data-hero-background="active"
+        ></div>
+
+        <div
+          class="np-hero__background"
+          data-hero-background="next"
+        ></div>
+      </div>
+
       <div class="np-container np-hero__inner">
+
+        <!-- ==========================================================
+             Columna izquierda
+             ========================================================== -->
         <div class="np-hero__content">
-          <p class="np-eyebrow">— Nueva línea —</p>
-          <h1 id="np-hero-title" class="np-hero__title">
-            Derrames pequeños.
-            <br>
-            <span class="np-text-accent">Nuestra misión.</span>
-          </h1>
-          <p class="np-hero__description np-text-muted-on-dark">
-            Soluciones prácticas y efectivas para controlar derrames,
-            mantener la seguridad y cumplir con las normas.
-          </p>
+
+          <!-- Este contenido solamente pertenece al slide principal -->
+          <div class="np-hero__primary-content">
+            <p class="np-eyebrow">
+              — Nueva línea —
+            </p>
+
+            <h1
+              id="np-hero-title"
+              class="np-hero__title"
+            >
+              Derrames pequeños.
+              <br>
+              <span class="np-text-accent">
+                Nuestra misión.
+              </span>
+            </h1>
+
+            <p class="np-hero__description np-text-muted-on-dark">
+              Soluciones prácticas y efectivas para controlar derrames,
+              mantener la seguridad y cumplir con las normas.
+            </p>
+          </div>
+
+          <!-- Los CTA permanececen visibles en TODOS los slides -->
           <div class="np-hero__actions">
-            <a href="#" class="np-button np-button--accent">
+            <a
+              href="#"
+              class="np-button np-button--accent"
+            >
               Ver catálogo
               ${iconArrowRight()}
             </a>
-            <a href="#" class="np-button np-button--outline">
+
+            <a
+              href="#"
+              class="np-button np-button--outline"
+            >
               Solicitar asesoría gratuita
               ${iconWhatsappSmall()}
             </a>
           </div>
         </div>
 
-        <div class="np-hero__visual" aria-hidden="true"></div>
+        <!-- Espacio visual central en desktop -->
+        <div
+          class="np-hero__visual"
+          aria-hidden="true"
+        ></div>
 
-        <aside class="np-hero__sidebar" aria-label="Beneficios destacados">
-          ${heroSidebarItem('shield', 'Protege', 'Al personal, equipos e instalaciones.')}
-          ${heroSidebarItem('check-circle', 'Cumple', 'Con normas y regulaciones ambientales.')}
-          ${heroSidebarItem('dollar', 'Ahorra', 'Tiempo, dinero y recursos en limpieza.')}
-          ${heroSidebarItem('leaf', 'Sostenible', 'Soluciones responsables con el medio ambiente.')}
+        <!-- ==========================================================
+             Sidebar: solamente slide principal
+             ========================================================== -->
+        <aside
+          class="np-hero__sidebar"
+          aria-label="Beneficios destacados"
+        >
+          ${heroSidebarItem(
+            'shield',
+            'Protege',
+            'Al personal, equipos e instalaciones.'
+          )}
+
+          ${heroSidebarItem(
+            'check-circle',
+            'Cumple',
+            'Con normas y regulaciones ambientales.'
+          )}
+
+          ${heroSidebarItem(
+            'dollar',
+            'Ahorra',
+            'Tiempo, dinero y recursos en limpieza.'
+          )}
+
+          ${heroSidebarItem(
+            'leaf',
+            'Sostenible',
+            'Soluciones responsables con el medio ambiente.'
+          )}
         </aside>
       </div>
+
+      <!-- ============================================================
+           Indicadores del carrusel
+           Se generan posteriormente desde JavaScript.
+           ============================================================ -->
+      <div
+        class="np-hero__carousel-controls"
+        aria-label="Diapositivas del hero"
+      >
+      </div>
+
     </section>
   `;
 }
