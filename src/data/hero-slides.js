@@ -3,19 +3,6 @@ const BASE_URL = import.meta.env.BASE_URL;
 export const heroSlides = [
   {
     id: 'main',
-    desktopImage: `${BASE_URL}images/hero/hero-new-pig.png`,
-    mobileImage: `${BASE_URL}images/hero/hero-new-pig.png`,
-
-    showContent: true,
-    showSidebar: true
-  },
-
-  /*
-   * Slide temporal para probar el comportamiento del carrusel.
-   * Sustituir cuando llegue el asset real.
-   */
-  {
-    id: 'test-slide',
 
     desktopImage:
       `${BASE_URL}images/hero/hero-new-pig.png`,
@@ -23,16 +10,18 @@ export const heroSlides = [
     mobileImage:
       `${BASE_URL}images/hero/hero-new-pig.png`,
 
-    showContent: false,
-    showSidebar: false
-  }
+    showContent: true,
+    showSidebar: true
+  },
 
-  // Se activarán cuando recibamos las imágenes reales.
-  /*
   {
     id: 'promotion-01',
-    desktopImage: `${BASE_URL}images/hero/hero-slide-02-desktop.webp`,
-    mobileImage: `${BASE_URL}images/hero/hero-slide-02-mobile.webp`,
+
+    desktopImage:
+      `${BASE_URL}images/hero/hero-slides-01-desktop.jpeg`,
+
+    mobileImage:
+      `${BASE_URL}images/hero/hero-slides-01-mobile.jpeg`,
 
     showContent: false,
     showSidebar: false
@@ -40,11 +29,40 @@ export const heroSlides = [
 
   {
     id: 'promotion-02',
-    desktopImage: `${BASE_URL}images/hero/hero-slide-03-desktop.webp`,
-    mobileImage: `${BASE_URL}images/hero/hero-slide-03-mobile.webp`,
+
+    desktopImage:
+      `${BASE_URL}images/hero/hero-slides-02-desktop.jpeg`,
+
+    mobileImage:
+      `${BASE_URL}images/hero/hero-slides-02-mobile.jpeg`,
+
+    showContent: false,
+    showSidebar: false
+  },
+
+  {
+    id: 'promotion-03',
+
+    desktopImage:
+      `${BASE_URL}images/hero/hero-slides-03-desktop.jpeg`,
+
+    mobileImage:
+      `${BASE_URL}images/hero/hero-slides-03-mobile.jpeg`,
+
+    showContent: false,
+    showSidebar: false
+  },
+
+  {
+    id: 'promotion-04',
+
+    desktopImage:
+      `${BASE_URL}images/hero/hero-slides-04-desktop.jpeg`,
+
+    mobileImage:
+      `${BASE_URL}images/hero/hero-slides-04-mobile.jpeg`,
 
     showContent: false,
     showSidebar: false
   }
-  */
 ];
