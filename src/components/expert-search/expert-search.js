@@ -130,15 +130,12 @@ export function createExpertSearch() {
         </div>
 
         <div class="np-expert-search__media">
-          <div class="np-expert-search__media-placeholder">
-            <span class="np-expert-search__media-icon" aria-hidden="true">
-              ${iconImage()}
-            </span>
-
-            <span class="np-expert-search__media-text">
-              Imagen pendiente
-            </span>
-          </div>
+          <img
+            src="${import.meta.env.BASE_URL}images/expert-search/expert-search.jpeg"
+            alt="Especialista de New Pig brindando asesoría en seguridad industrial"
+            class="np-expert-search__image"
+            loading="lazy"
+          />
         </div>
 
       </div>
@@ -167,42 +164,6 @@ function iconSearch() {
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
-      />
-    </svg>
-  `;
-}
-
-function iconImage() {
-  return `
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect
-        x="8"
-        y="10"
-        width="48"
-        height="44"
-        rx="5"
-        stroke="currentColor"
-        stroke-width="2"
-      />
-
-      <circle
-        cx="23"
-        cy="25"
-        r="5"
-        stroke="currentColor"
-        stroke-width="2"
-      />
-
-      <path
-        d="M13 47l13-13 9 9 7-7 9 11"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
       />
     </svg>
   `;

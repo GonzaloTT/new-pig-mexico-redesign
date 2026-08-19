@@ -205,52 +205,18 @@
   overflow: hidden;
 
   border-radius: var(--np-radius-lg);
+
+  box-shadow: var(--np-shadow-md);
 }
 
-/* Placeholder mientras esperamos la imagen definitiva */
-
-.np-expert-search__media-placeholder {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 320px;
-
-  gap: var(--np-space-md);
-
-  padding: var(--np-space-xl);
-
-  color: var(--np-color-muted);
-
-  background-color: var(--np-color-gray-light);
-
-  border: 1px dashed var(--np-color-gray-medium);
-  border-radius: inherit;
-}
-
-.np-expert-search__media-icon {
+.np-expert-search__image {
   display: block;
 
-  width: 110px;
-  height: 110px;
-
-  color: var(--np-color-gray-dark);
-}
-
-.np-expert-search__media-icon svg {
   width: 100%;
   height: 100%;
-}
 
-.np-expert-search__media-text {
-  font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-medium);
-
-  color: var(--np-color-muted);
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ==========================================================================
@@ -259,13 +225,6 @@
 
 @media (min-width: 1024px) {
   .np-expert-search__container {
-    /*
-     * La izquierda recibe más espacio porque contiene:
-     * título + descripción + botones + buscador.
-     *
-     * Aproximadamente:
-     * 68% contenido / 32% imagen.
-     */
     grid-template-columns:
       minmax(0, 2.1fr)
       minmax(300px, 1fr);
@@ -279,10 +238,6 @@
     justify-content: center;
   }
 
-  /*
-   * Al estar dentro de una columna suficientemente amplia,
-   * mantenemos el mismo aspecto centrado del diseño original.
-   */
   .np-expert-search__intro {
     align-items: center;
 
@@ -293,17 +248,7 @@
     width: 100%;
   }
 
-  /*
-   * Hace que el placeholder de imagen use toda la altura
-   * disponible de su columna, similar a company-story.
-   */
   .np-expert-search__media {
-    display: flex;
-  }
-
-  .np-expert-search__media-placeholder {
-    flex: 1;
-
     min-height: 100%;
   }
 }
@@ -311,6 +256,16 @@
 /* ==========================================================================
    MOBILE
    ========================================================================== */
+
+@media (max-width: 1023px) {
+  .np-expert-search__media {
+    max-height: 420px;
+  }
+
+  .np-expert-search__image {
+    min-height: 280px;
+  }
+}
 
 @media (max-width: 599px) {
   .np-expert-search__field {
@@ -325,7 +280,11 @@
     width: 100%;
   }
 
-  .np-expert-search__media-placeholder {
+  .np-expert-search__media {
+    max-height: 320px;
+  }
+
+  .np-expert-search__image {
     min-height: 240px;
   }
 }
