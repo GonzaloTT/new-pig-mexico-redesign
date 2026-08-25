@@ -1,0 +1,311 @@
+/* ==========================================================================
+   PIG-ALGORITHM-HERO.CSS
+   ========================================================================== */
+
+.np-pig-hero {
+  background-color: var(--np-color-white);
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.np-pig-hero__container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+
+  gap: var(--np-space-2xl);
+}
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.np-pig-hero__content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: var(--np-space-md);
+}
+
+.np-pig-hero__eyebrow {
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.np-pig-hero__title {
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
+  font-size: clamp(
+    var(--np-font-size-2xl),
+    5vw,
+    var(--np-font-size-3xl)
+  );
+  font-weight: var(--np-font-weight-bold);
+
+  line-height: 1.05;
+
+  color: var(--np-color-primary);
+}
+
+.np-pig-hero__description {
+  max-width: 58ch;
+
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-md);
+  font-weight: var(--np-font-weight-regular);
+
+  line-height: var(--np-line-height-relaxed);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   ACTIONS
+   ========================================================================== */
+
+.np-pig-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--np-space-md);
+
+  margin-top: var(--np-space-sm);
+}
+
+.np-pig-hero__actions .np-button {
+  min-height: 48px;
+
+  white-space: nowrap;
+}
+
+.np-pig-hero__primary-cta {
+  box-shadow: var(--np-shadow-sm);
+}
+
+/* ==========================================================================
+   MEDIA
+   ========================================================================== */
+
+.np-pig-hero__media {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.np-pig-hero__media-placeholder {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 360px;
+
+  gap: var(--np-space-md);
+
+  padding: var(--np-space-xl);
+
+  overflow: hidden;
+
+  color: var(--np-color-muted);
+
+  background-color: var(--np-color-gray-light);
+
+  border:
+    1px dashed
+    var(--np-color-gray-medium);
+
+  border-radius: var(--np-radius-lg);
+
+  box-shadow: var(--np-shadow-md);
+}
+
+.np-pig-hero__media-icon {
+  display: block;
+
+  width: 96px;
+  height: 96px;
+
+  color: var(--np-color-gray-dark);
+}
+
+.np-pig-hero__media-icon svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.np-pig-hero__media-text {
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   FLOATING BADGE
+   ========================================================================== */
+
+.np-pig-hero__badge {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  width: calc(100% - var(--np-space-xl));
+
+  max-width: 360px;
+
+  gap: var(--np-space-sm);
+
+  margin:
+    calc(var(--np-space-xl) * -1)
+    auto
+    0;
+
+  padding: var(--np-space-md);
+
+  background-color: var(--np-color-white);
+
+  border:
+    1px solid
+    var(--np-color-border);
+
+  border-radius: var(--np-radius-md);
+
+  box-shadow: var(--np-shadow-md);
+}
+
+.np-pig-hero__badge-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 34px;
+  height: 34px;
+
+  color: var(--np-color-primary);
+
+  background-color:
+    var(--np-color-secondary-light);
+
+  border-radius: var(--np-radius-sm);
+}
+
+.np-pig-hero__badge-title {
+  margin: 0 0 4px;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-pig-hero__badge-text {
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+
+  line-height: var(--np-line-height-snug);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .np-pig-hero__container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(420px, 0.95fr);
+
+    gap: var(--np-space-3xl);
+  }
+
+  .np-pig-hero__media-placeholder {
+    min-height: 430px;
+  }
+
+  .np-pig-hero__badge {
+    position: absolute;
+
+    left: -36px;
+    bottom: -28px;
+
+    width: min(
+      360px,
+      calc(100% - var(--np-space-xl))
+    );
+
+    margin: 0;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .np-pig-hero__media-placeholder {
+    min-height: 380px;
+  }
+
+  .np-pig-hero__badge {
+    max-width: 420px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-pig-hero__actions {
+    width: 100%;
+  }
+
+  .np-pig-hero__actions .np-button {
+    width: 100%;
+  }
+
+  .np-pig-hero__media-placeholder {
+    min-height: 280px;
+  }
+
+  .np-pig-hero__badge {
+    width: calc(100% - var(--np-space-md));
+
+    margin-top:
+      calc(var(--np-space-lg) * -1);
+
+    padding: var(--np-space-sm);
+  }
+}

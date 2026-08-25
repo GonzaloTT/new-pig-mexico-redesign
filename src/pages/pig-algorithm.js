@@ -10,20 +10,20 @@ import { createWhatsappFloat } from '../components/whatsapp-float/whatsapp-float
 
 import { initNavigation } from '../scripts/navigation.js';
 
+import { createPigAlgorithmHero } from '../components/pig-algorithm/pig-algorithm-hero/pig-algorithm-hero.js';
+import { createPigAlgorithmAbout } from '../components/pig-algorithm/pig-algorithm-about/pig-algorithm-about.js';
+import { createPigAlgorithmProcess } from '../components/pig-algorithm/pig-algorithm-process/pig-algorithm-process.js';
+import { createPigAlgorithmCta } from '../components/pig-algorithm/pig-algorithm-cta/pig-algorithm-cta.js';
+
 function renderPigAlgorithm(root) {
   root.innerHTML = `
     ${createHeader()}
 
     <main class="np-main" id="np-main-content">
-      <section class="np-section">
-        <div class="np-container">
-          <h1>Algoritmo PIG</h1>
-
-          <p>
-            Página en construcción.
-          </p>
-        </div>
-      </section>
+      ${createPigAlgorithmHero()}
+      ${createPigAlgorithmAbout()}
+      ${createPigAlgorithmProcess()}
+      ${createPigAlgorithmCta()}
     </main>
 
     ${createFooter()}
