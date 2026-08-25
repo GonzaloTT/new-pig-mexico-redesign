@@ -52,7 +52,7 @@ export function createHeader() {
                   ${iconChevronDown()}
                 </a>
               </li>
-              <li><a href="#" class="np-header__nav-link">Encuentra tu Solución</a></li>
+              <li><a href="#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
               <li><a href="#" class="np-header__nav-link">Cotizador</a></li>
               <li class="np-header__nav-item--dropdown">
                 <a href="#" class="np-header__nav-link">
@@ -61,7 +61,7 @@ export function createHeader() {
                 </a>
               </li>
               <li><a href="#" class="np-header__nav-link">Blog</a></li>
-              <li><a href="#" class="np-header__nav-link">Acerca de Nosotros</a></li>
+              <li><a href="#about-us" class="np-header__nav-link">Acerca de Nosotros</a></li>
             </ul>
           </nav>
 
@@ -116,11 +116,11 @@ export function createHeader() {
         <ul class="np-header__mobile-nav-list">
           <li><a href="#" class="np-header__mobile-nav-link">Inicio</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Productos</a></li>
-          <li><a href="#" class="np-header__mobile-nav-link">Encuentra tu Solución</a></li>
+          <li><a href="#find-your-solution" class="np-header__mobile-nav-link">Encuentra tu Solución</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Cotizador</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Recursos</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Blog</a></li>
-          <li><a href="#" class="np-header__mobile-nav-link">Acerca de Nosotros</a></li>
+          <li><a href="#about-us" class="np-header__mobile-nav-link">Acerca de Nosotros</a></li>
         </ul>
       </nav>
       <div class="np-header__overlay" id="np-header-overlay" data-state="closed"></div>

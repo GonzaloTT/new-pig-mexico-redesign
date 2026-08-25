@@ -5,6 +5,12 @@
 
 html {
   overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+#about-us,
+#find-your-solution {
+  scroll-margin-top: 120px;
 }
 
 body {

@@ -12,7 +12,7 @@ const BASE_URL = import.meta.env.BASE_URL;
  */
 export function createCompanyStory() {
   return `
-    <section class="np-company-story np-section np-section--gray" aria-labelledby="np-company-story-title">
+    <section id="about-us" class="np-company-story np-section np-section--gray" aria-labelledby="np-company-story-title">
       <div class="np-container np-company-story__grid">
         <div class="np-company-story__media">
           <div class="np-company-story__image-wrapper">

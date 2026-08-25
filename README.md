@@ -51,7 +51,7 @@ npm run preview
 
 ## Estructura del proyecto
 
-new-pig-mexico-home-redesign/
+new-pig-mexico-redesign/
 ├── public/
 │ ├── images/
 │ │ ├── placeholders/

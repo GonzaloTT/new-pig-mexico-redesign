@@ -17,6 +17,7 @@ import './expert-search.css';
 export function createExpertSearch() {
   return `
     <section
+      id="find-your-solution"
       class="np-expert-search np-section"
       aria-labelledby="np-expert-search-title"
     >
