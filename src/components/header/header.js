@@ -29,7 +29,11 @@ export function createHeader() {
       <!-- Navegación principal -->
       <div class="np-header__main">
         <div class="np-container np-header__main-inner">
-          <a href="#" class="np-header__brand" aria-label="New Pig México, ir al inicio">
+          <a
+            href="${BASE_URL}"
+            class="np-header__brand"
+            aria-label="New Pig México, ir al inicio"
+          >
             <span class="np-header__logo">
             <img
               src="${BASE_URL}images/logos/logo-new-pig-mexico.png"
@@ -45,23 +49,44 @@ export function createHeader() {
 
           <nav class="np-header__nav" id="np-primary-nav" aria-label="Navegación principal">
             <ul class="np-header__nav-list">
-              <li><a href="#" class="np-header__nav-link">Inicio</a></li>
+              <li>
+                <a href="${BASE_URL}" class="np-header__nav-link">
+                  Inicio
+                </a>
+              </li>
               <li class="np-header__nav-item--dropdown">
                 <a href="#" class="np-header__nav-link">
                   Productos
                   ${iconChevronDown()}
                 </a>
               </li>
-              <li><a href="#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
+              <li><a href="${BASE_URL}#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
               <li><a href="#" class="np-header__nav-link">Cotizador</a></li>
               <li class="np-header__nav-item--dropdown">
-                <a href="#" class="np-header__nav-link">
-                  Recursos
-                  ${iconChevronDown()}
-                </a>
+              <button
+                type="button"
+                class="np-header__nav-link np-header__dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+                data-header-dropdown-toggle
+              >
+                Recursos
+                ${iconChevronDown()}
+              </button>
+
+              <ul class="np-header__dropdown-menu">
+              <li>
+                  <a
+                    href="${BASE_URL}algoritmo-pig/"
+                    class="np-header__dropdown-link"
+                  >
+                    Algoritmo Pig
+                  </a>
+                </li>
+                </ul>
               </li>
               <li><a href="#" class="np-header__nav-link">Blog</a></li>
-              <li><a href="#about-us" class="np-header__nav-link">Acerca de Nosotros</a></li>
+              <li><a href="${BASE_URL}#about-us" class="np-header__nav-link">Acerca de Nosotros</a></li>
             </ul>
           </nav>
 
@@ -114,14 +139,42 @@ export function createHeader() {
         data-state="closed"
       >
         <ul class="np-header__mobile-nav-list">
-          <li><a href="#" class="np-header__mobile-nav-link">Inicio</a></li>
+          <li>
+            <a
+              href="${BASE_URL}"
+              class="np-header__mobile-nav-link"
+            >
+              Inicio
+            </a>
+          </li>
           <li><a href="#" class="np-header__mobile-nav-link">Productos</a></li>
-          <li><a href="#find-your-solution" class="np-header__mobile-nav-link">Encuentra tu Solución</a></li>
+          <li>
+            <a
+            href="${BASE_URL}#find-your-solution"
+            class="np-header__mobile-nav-link"
+            >
+              Encuentra tu Solución
+            </a>
+          </li>
           <li><a href="#" class="np-header__mobile-nav-link">Cotizador</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Recursos</a></li>
+          <li>
+            <a
+              href="${BASE_URL}algoritmo-pig/"
+              class="np-header__mobile-nav-link"
+            >
+              Algoritmo Pig
+            </a>
+          </li>
           <li><a href="#" class="np-header__mobile-nav-link">Blog</a></li>
-          <li><a href="#about-us" class="np-header__mobile-nav-link">Acerca de Nosotros</a></li>
-        </ul>
+          <li>
+            <a
+              href="${BASE_URL}#about-us"
+              class="np-header__mobile-nav-link"
+            >
+              Acerca de Nosotros
+            </a>
+          </li>
       </nav>
       <div class="np-header__overlay" id="np-header-overlay" data-state="closed"></div>
     </header>
