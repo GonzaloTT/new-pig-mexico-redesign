@@ -1,0 +1,377 @@
+/* ==========================================================================
+   QUOTE-BUILDER.CSS
+   ========================================================================== */
+
+.np-quote-builder {
+  padding-top: var(--np-space-lg);
+
+  background-color: var(--np-color-background);
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.np-quote-builder__container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: var(--np-space-xl);
+
+  align-items: start;
+}
+
+/* ==========================================================================
+   PRODUCTS
+   ========================================================================== */
+
+.np-quote-builder__products {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background-color: var(--np-color-white);
+
+  border:
+    1px solid
+    var(--np-color-border);
+
+  border-radius: var(--np-radius-lg);
+
+  box-shadow: var(--np-shadow-sm);
+}
+
+.np-quote-builder__products-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--np-space-md);
+
+  padding: var(--np-space-lg);
+
+  border-bottom:
+    1px solid
+    var(--np-color-border);
+}
+
+.np-quote-builder__eyebrow {
+  margin: 0 0 4px;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-muted);
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.np-quote-builder__title {
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
+  font-size: var(--np-font-size-xl);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-quote-builder__count {
+  flex-shrink: 0;
+
+  padding:
+    var(--np-space-xs)
+    var(--np-space-sm);
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+
+  background-color:
+    var(--np-color-secondary-light);
+
+  border-radius: var(--np-radius-full);
+}
+
+/* ==========================================================================
+   EMPTY STATE
+   ========================================================================== */
+
+.np-quote-builder__empty {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  min-height: 360px;
+
+  padding: var(--np-space-2xl);
+
+  gap: var(--np-space-md);
+
+  text-align: center;
+}
+
+.np-quote-builder__empty-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 78px;
+  height: 78px;
+
+  color: var(--np-color-primary);
+
+  background-color:
+    var(--np-color-secondary-light);
+
+  border-radius: 50%;
+}
+
+.np-quote-builder__empty-title {
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
+  font-size: var(--np-font-size-xl);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-quote-builder__empty-description {
+  max-width: 48ch;
+
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+
+  line-height: var(--np-line-height-relaxed);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   SUMMARY
+   ========================================================================== */
+
+.np-quote-summary {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--np-space-md);
+
+  padding: var(--np-space-xl);
+
+  background-color: var(--np-color-white);
+
+  border:
+    1px solid
+    var(--np-color-border);
+
+  border-radius: var(--np-radius-lg);
+
+  box-shadow: var(--np-shadow-md);
+}
+
+.np-quote-summary__title {
+  margin: 0 0 var(--np-space-sm);
+
+  font-family: var(--np-font-family-heading);
+  font-size: var(--np-font-size-lg);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-quote-summary__details {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--np-space-sm);
+
+  padding-bottom: var(--np-space-md);
+
+  border-bottom:
+    1px solid
+    var(--np-color-border);
+}
+
+.np-quote-summary__row {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: var(--np-space-md);
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+
+  color: var(--np-color-muted);
+}
+
+.np-quote-summary__row span:last-child {
+  flex-shrink: 0;
+
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-text);
+}
+
+/* ==========================================================================
+   TOTAL
+   ========================================================================== */
+
+.np-quote-summary__total {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: var(--np-space-md);
+}
+
+.np-quote-summary__total span {
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-quote-summary__total strong {
+  font-family: var(--np-font-family-heading);
+  font-size: var(--np-font-size-xl);
+
+  color: var(--np-color-primary);
+
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   NOTE
+   ========================================================================== */
+
+.np-quote-summary__note {
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+
+  line-height: var(--np-line-height-snug);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   SUBMIT
+   ========================================================================== */
+
+.np-quote-summary__submit {
+  width: 100%;
+
+  margin-top: var(--np-space-xs);
+}
+
+.np-quote-summary__submit:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   SECURITY
+   ========================================================================== */
+
+.np-quote-summary__security {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--np-space-xs);
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+
+  color: var(--np-color-muted);
+}
+
+.np-quote-summary__security svg {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .np-quote-builder__container {
+    grid-template-columns:
+      minmax(0, 1.8fr)
+      minmax(300px, 0.75fr);
+
+    gap: var(--np-space-xl);
+  }
+
+  .np-quote-summary {
+    position: sticky;
+
+    top: 150px;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .np-quote-builder__empty {
+    min-height: 320px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-quote-builder__products-header {
+    align-items: flex-start;
+
+    padding: var(--np-space-md);
+  }
+
+  .np-quote-builder__empty {
+    min-height: 300px;
+
+    padding:
+      var(--np-space-xl)
+      var(--np-space-md);
+  }
+
+  .np-quote-builder__empty-icon {
+    width: 66px;
+    height: 66px;
+  }
+
+  .np-quote-summary {
+    padding: var(--np-space-lg);
+  }
+
+  .np-quote-summary__total {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: var(--np-space-xs);
+  }
+}

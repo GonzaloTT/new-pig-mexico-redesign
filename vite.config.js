@@ -15,6 +15,10 @@ export default defineConfig({
         blog: resolve(
           __dirname,
           'blog/index.html'
+        ),
+        quote: resolve(
+          __dirname,
+          'cotizador/index.html'
         )
       }
     }

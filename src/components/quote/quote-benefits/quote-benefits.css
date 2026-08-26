@@ -1,0 +1,129 @@
+/* ==========================================================================
+   QUOTE-BENEFITS.CSS
+   ========================================================================== */
+
+.np-quote-benefits {
+  padding-top: 0;
+
+  background-color: var(--np-color-background);
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+.np-quote-benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: var(--np-space-lg);
+
+  padding-top: var(--np-space-xl);
+
+  border-top:
+    1px solid
+    var(--np-color-border);
+}
+
+/* ==========================================================================
+   BENEFIT CARD
+   ========================================================================== */
+
+.np-quote-benefit {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: var(--np-space-sm);
+
+  padding: var(--np-space-xl);
+
+  background-color:
+    var(--np-color-gray-light);
+
+  border-radius: var(--np-radius-md);
+
+  transition:
+    transform var(--np-transition-fast),
+    box-shadow var(--np-transition-fast);
+}
+
+.np-quote-benefit:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--np-shadow-sm);
+}
+
+/* ==========================================================================
+   ICON
+   ========================================================================== */
+
+.np-quote-benefit__icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: var(--np-space-xs);
+
+  color: var(--np-color-white);
+
+  background-color: var(--np-color-primary);
+
+  border-radius: var(--np-radius-sm);
+}
+
+.np-quote-benefit__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==========================================================================
+   TEXT
+   ========================================================================== */
+
+.np-quote-benefit__title {
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
+  font-size: var(--np-font-size-base);
+  font-weight: var(--np-font-weight-bold);
+
+  color: var(--np-color-primary);
+}
+
+.np-quote-benefit__description {
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+
+  line-height: var(--np-line-height-snug);
+
+  color: var(--np-color-muted);
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 600px) {
+  .np-quote-benefits__grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-quote-benefit {
+    padding: var(--np-space-lg);
+  }
+}

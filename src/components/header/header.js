@@ -61,7 +61,7 @@ export function createHeader() {
                 </a>
               </li>
               <li><a href="${BASE_URL}#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
-              <li><a href="#" class="np-header__nav-link">Cotizador</a></li>
+              <li><a href="${BASE_URL}cotizador/" class="np-header__nav-link">Cotizador</a></li>
               <li class="np-header__nav-item--dropdown">
               <button
                 type="button"
@@ -156,7 +156,7 @@ export function createHeader() {
               Encuentra tu Solución
             </a>
           </li>
-          <li><a href="#" class="np-header__mobile-nav-link">Cotizador</a></li>
+          <li><a href="${BASE_URL}cotizador/" class="np-header__mobile-nav-link">Cotizador</a></li>
           <li><a href="#" class="np-header__mobile-nav-link">Recursos</a></li>
           <li>
             <a
