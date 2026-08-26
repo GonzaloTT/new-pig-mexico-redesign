@@ -85,7 +85,7 @@ export function createHeader() {
                 </li>
                 </ul>
               </li>
-              <li><a href="#" class="np-header__nav-link">Blog</a></li>
+              <li><a href="${BASE_URL}blog/" class="np-header__nav-link">Blog</a></li>
               <li><a href="${BASE_URL}#about-us" class="np-header__nav-link">Acerca de Nosotros</a></li>
             </ul>
           </nav>
@@ -166,7 +166,7 @@ export function createHeader() {
               Algoritmo Pig
             </a>
           </li>
-          <li><a href="#" class="np-header__mobile-nav-link">Blog</a></li>
+          <li><a href="${BASE_URL}blog/" class="np-header__mobile-nav-link">Blog</a></li>
           <li>
             <a
               href="${BASE_URL}#about-us"

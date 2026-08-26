@@ -1,0 +1,239 @@
+/* ==========================================================================
+   BLOG-HERO.CSS
+   ========================================================================== */
+
+.np-blog-hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  color: var(--np-color-on-dark);
+
+  background-color: var(--np-color-primary);
+}
+
+/* ==========================================================================
+   BACKGROUND / PLACEHOLDER
+   ========================================================================== */
+
+.np-blog-hero__background {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.np-blog-hero__placeholder {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  gap: var(--np-space-md);
+
+  color:
+    rgb(var(--np-brand-white-rgb) / 48%);
+
+  background-color: var(--np-brand-dark-blue);
+}
+
+.np-blog-hero__placeholder-icon {
+  display: block;
+
+  width: 90px;
+  height: 90px;
+}
+
+.np-blog-hero__placeholder-icon svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.np-blog-hero__placeholder-text {
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-sm);
+  font-weight: var(--np-font-weight-bold);
+}
+
+/* ==========================================================================
+   OVERLAY
+   ========================================================================== */
+
+.np-blog-hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgb(var(--np-brand-dark-blue-rgb) / 94%) 0%,
+      rgb(var(--np-brand-dark-blue-rgb) / 82%) 38%,
+      rgb(var(--np-brand-dark-blue-rgb) / 54%) 66%,
+      rgb(var(--np-brand-dark-blue-rgb) / 38%) 100%
+    );
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+.np-blog-hero__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+.np-blog-hero__content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  max-width: 720px;
+
+  gap: var(--np-space-md);
+}
+
+/* ==========================================================================
+   BREADCRUMB
+   ========================================================================== */
+
+.np-blog-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: var(--np-space-xs);
+
+  margin-bottom: var(--np-space-xs);
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-xs);
+  font-weight: var(--np-font-weight-bold);
+}
+
+.np-blog-hero__breadcrumb-link {
+  color: var(--np-color-on-dark);
+
+  transition:
+    color var(--np-transition-fast);
+}
+
+.np-blog-hero__breadcrumb-link:hover,
+.np-blog-hero__breadcrumb-link:focus-visible {
+  color: var(--np-color-accent);
+}
+
+.np-blog-hero__breadcrumb-separator {
+  color:
+    rgb(var(--np-brand-white-rgb) / 65%);
+}
+
+.np-blog-hero__breadcrumb-current {
+  color: var(--np-color-accent);
+}
+
+/* ==========================================================================
+   TEXT
+   ========================================================================== */
+
+.np-blog-hero__title {
+  max-width: 18ch;
+
+  margin: 0;
+
+  font-family: var(--np-font-family-heading);
+  font-size: clamp(
+    var(--np-font-size-2xl),
+    4.5vw,
+    var(--np-font-size-3xl)
+  );
+  font-weight: var(--np-font-weight-bold);
+
+  line-height: 1.08;
+
+  color: var(--np-color-on-dark);
+}
+
+.np-blog-hero__description {
+  max-width: 62ch;
+
+  margin: 0;
+
+  font-family: var(--np-font-family-body);
+  font-size: var(--np-font-size-md);
+  font-weight: var(--np-font-weight-regular);
+
+  line-height: var(--np-line-height-relaxed);
+
+  color: var(--np-color-on-dark-muted);
+}
+
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .np-blog-hero {
+    min-height: 440px;
+  }
+
+  .np-blog-hero__content {
+    padding-block: var(--np-space-3xl);
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .np-blog-hero {
+    min-height: 400px;
+  }
+
+  .np-blog-hero__content {
+    padding-block: var(--np-space-2xl);
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-blog-hero {
+    min-height: 380px;
+  }
+
+  .np-blog-hero__content {
+    padding-block: var(--np-space-2xl);
+  }
+
+  .np-blog-hero__title {
+    max-width: none;
+  }
+
+  .np-blog-hero__description {
+    font-size: var(--np-font-size-base);
+  }
+
+  .np-blog-hero__placeholder-icon {
+    width: 72px;
+    height: 72px;
+  }
+}
