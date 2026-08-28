@@ -1,6 +1,8 @@
 import './categories.css';
 import { categories } from '../../data/categories.js';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 /**
  * createCategories
  * Sección "Encuentra la solución que necesitas": título, texto
@@ -24,7 +26,7 @@ export function createCategories() {
               Explora nuestras categorías principales
             </p>
           </div>
-          <a href="#" class="np-categories__link">
+          <a  href="${BASE_URL}catalogo/" class="np-categories__link">
             Ver catálogo completo
             ${iconArrowRight()}
           </a>
