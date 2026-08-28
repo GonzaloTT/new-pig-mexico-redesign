@@ -54,11 +54,106 @@ export function createHeader() {
                   Inicio
                 </a>
               </li>
-              <li class="np-header__nav-item--dropdown">
-                <a href="#" class="np-header__nav-link">
-                  Productos
+              <li
+                class="np-header__nav-item--dropdown"
+                data-state="closed"
+              >
+                <button
+                  type="button"
+                  class="
+                    np-header__nav-link
+                    np-header__dropdown-toggle
+                  "
+                  data-header-dropdown-toggle
+                  aria-expanded="false"
+                  aria-controls="np-products-dropdown"
+                >
+                  Catalogo
                   ${iconChevronDown()}
-                </a>
+                </button>
+
+                <div
+                  class="np-header__dropdown-menu"
+                  id="np-products-dropdown"
+                >
+                  <a
+                    href="${BASE_URL}catalogo/"
+                    class="
+                      np-header__dropdown-link
+                      np-header__dropdown-link--all
+                    "
+                  >
+                    Ver todo el catálogo
+                  </a>
+
+                  <div
+                    class="np-header__dropdown-divider"
+                    aria-hidden="true"
+                  ></div>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=tapetes-absorbentes"
+                    class="np-header__dropdown-link"
+                  >
+                    Tapetes Absorbentes
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=trapos-industriales"
+                    class="np-header__dropdown-link"
+                  >
+                    Trapos Industriales
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=seguridad-en-pisos"
+                    class="np-header__dropdown-link"
+                  >
+                    Seguridad en Pisos
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=absorbentes"
+                    class="np-header__dropdown-link"
+                  >
+                    Absorbentes
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=kits-para-derrames"
+                    class="np-header__dropdown-link"
+                  >
+                    Kits para Derrames
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=proteccion-de-drenajes"
+                    class="np-header__dropdown-link"
+                  >
+                    Protección de Drenajes
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=seguridad-y-mantenimiento"
+                    class="np-header__dropdown-link"
+                  >
+                    Seguridad y Mantenimiento
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=almacenamiento-y-envio"
+                    class="np-header__dropdown-link"
+                  >
+                    Almacenamiento y Envío
+                  </a>
+
+                  <a
+                    href="${BASE_URL}catalogo/?categoria=control-de-derrames-y-contencion"
+                    class="np-header__dropdown-link"
+                  >
+                    Control de Derrames y Contención
+                  </a>
+                </div>
               </li>
               <li><a href="${BASE_URL}#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
               <li><a href="${BASE_URL}cotizador/" class="np-header__nav-link">Cotizador</a></li>
@@ -121,7 +216,131 @@ export function createHeader() {
               Inicio
             </a>
           </li>
-          <li><a href="#" class="np-header__mobile-nav-link">Productos</a></li>
+          <li
+            class="np-header__mobile-products"
+          >
+            <details
+              class="np-header__mobile-products-details"
+            >
+              <summary
+                class="
+                  np-header__mobile-nav-link
+                  np-header__mobile-products-toggle
+                "
+              >
+                <span>
+                  Catalogo
+                </span>
+
+                ${iconChevronDown()}
+              </summary>
+
+              <div
+                class="np-header__mobile-products-menu"
+              >
+                <a
+                  href="${BASE_URL}catalogo/"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                    np-header__mobile-category-link--all
+                  "
+                >
+                  Ver todo el catálogo
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=tapetes-absorbentes"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Tapetes Absorbentes
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=trapos-industriales"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Trapos Industriales
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=seguridad-en-pisos"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Seguridad en Pisos
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=absorbentes"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Absorbentes
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=kits-para-derrames"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Kits para Derrames
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=proteccion-de-drenajes"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Protección de Drenajes
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=seguridad-y-mantenimiento"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Seguridad y Mantenimiento
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=almacenamiento-y-envio"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Almacenamiento y Envío
+                </a>
+
+                <a
+                  href="${BASE_URL}catalogo/?categoria=control-de-derrames-y-contencion"
+                  class="
+                    np-header__mobile-nav-link
+                    np-header__mobile-category-link
+                  "
+                >
+                  Control de Derrames y Contención
+                </a>
+              </div>
+            </details>
+          </li>
           <li>
             <a
             href="${BASE_URL}#find-your-solution"

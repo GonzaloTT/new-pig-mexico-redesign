@@ -15,6 +15,10 @@ export default defineConfig({
         quote: resolve(
           __dirname,
           'cotizador/index.html'
+        ),
+        catalog: resolve(
+          __dirname,
+          'catalogo/index.html'
         )
       }
     }

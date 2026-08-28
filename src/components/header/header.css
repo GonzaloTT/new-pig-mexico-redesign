@@ -306,26 +306,56 @@
 
   z-index: 20;
 
-  min-width: 220px;
+  width: 310px;
+  max-height: calc(100vh - 140px);
 
-  padding: var(--np-space-xs);
+  padding:
+    var(--np-space-xs);
 
-  background-color: var(--np-color-white);
+  overflow-y: auto;
 
-  border: 1px solid var(--np-color-border);
-  border-radius: var(--np-radius-md);
+  background-color:
+    var(--np-color-white);
 
-  box-shadow: var(--np-shadow-md);
+  border:
+    1px solid
+    var(--np-color-border);
+
+  border-radius:
+    var(--np-radius-md);
+
+  box-shadow:
+    var(--np-shadow-md);
 
   opacity: 0;
   visibility: hidden;
 
-  transform: translateY(-6px);
+  transform:
+    translateY(-6px);
 
   transition:
     opacity var(--np-transition-fast),
     transform var(--np-transition-fast),
     visibility var(--np-transition-fast);
+}
+
+.np-header__dropdown-divider {
+  height: 1px;
+
+  margin:
+    var(--np-space-xs)
+    var(--np-space-sm);
+
+  background-color:
+    var(--np-color-border);
+}
+
+.np-header__dropdown-link--all {
+  color:
+    var(--np-color-secondary);
+
+  font-weight:
+    var(--np-font-weight-bold);
 }
 
 .np-header__nav-item--dropdown[data-state="open"]
@@ -434,6 +464,76 @@
   .np-header__mobile-nav {
     display: none;
   }
+}
+
+.np-header__mobile-products-details {
+  width: 100%;
+}
+
+.np-header__mobile-products-toggle {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+.np-header__mobile-products-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.np-header__mobile-products-toggle::marker {
+  display: none;
+}
+
+.np-header__mobile-products-toggle
+.np-header__chevron {
+  transition:
+    transform var(--np-transition-fast);
+}
+
+.np-header__mobile-products-details[open]
+.np-header__chevron {
+  transform:
+    rotate(180deg);
+}
+
+.np-header__mobile-products-menu {
+  display: flex;
+  flex-direction: column;
+
+  padding:
+    0.25rem
+    0
+    0.5rem
+    var(--np-space-sm);
+
+  background-color:
+    var(--np-color-gray-light);
+}
+
+.np-header__mobile-category-link {
+  padding:
+    0.65rem
+    var(--np-space-sm);
+
+  border-bottom:
+    1px solid
+    var(--np-color-border);
+
+  font-size:
+    var(--np-font-size-sm);
+}
+
+.np-header__mobile-category-link--all {
+  color:
+    var(--np-color-secondary);
+
+  font-weight:
+    var(--np-font-weight-bold);
 }
 
 /* --- Overlay --- */

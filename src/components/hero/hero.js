@@ -1,3 +1,4 @@
+const BASE_URL = import.meta.env.BASE_URL;
 import './hero.css';
 
 /**
@@ -69,7 +70,7 @@ export function createHero() {
           <!-- Los CTA permanececen visibles en TODOS los slides -->
           <div class="np-hero__actions">
             <a
-              href="#"
+              href="${BASE_URL}catalogo/"
               class="np-button np-button--accent"
             >
               Ver catálogo

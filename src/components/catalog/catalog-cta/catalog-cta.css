@@ -1,0 +1,155 @@
+/* ==========================================================================
+   CATALOG CTA
+   ========================================================================== */
+
+.np-catalog-cta {
+  padding-block:
+    calc(var(--np-space-xl) * 1.8);
+
+  background-color:
+    var(--np-color-gray-light);
+
+  color:
+    var(--np-color-text);
+
+  border-top:
+    1px solid
+    var(--np-color-border);
+}
+
+.np-catalog-cta__content {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+.np-catalog-cta__title {
+  margin:
+    0
+    0
+    var(--np-space-md);
+
+  color:
+    var(--np-color-primary);
+}
+
+.np-catalog-cta__description {
+  max-width: 680px;
+
+  margin:
+    0
+    auto
+    var(--np-space-xl);
+
+  color:
+    var(--np-color-muted);
+
+  line-height: 1.65;
+}
+
+.np-catalog-cta__actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    var(--np-space-md);
+}
+
+.np-catalog-cta__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0.75rem
+    1.4rem;
+
+  border-radius:
+    var(--np-radius-md);
+
+  font-family:
+    var(--np-font-family-body);
+
+  font-size:
+    var(--np-font-size-sm);
+
+  font-weight:
+    var(--np-font-weight-bold);
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--np-transition-fast),
+    border-color var(--np-transition-fast),
+    color var(--np-transition-fast),
+    transform var(--np-transition-fast);
+}
+
+.np-catalog-cta__button:hover,
+.np-catalog-cta__button:focus-visible {
+  transform:
+    translateY(-2px);
+}
+
+.np-catalog-cta__button--primary {
+  border:
+    1px solid
+    var(--np-color-accent);
+
+  background-color:
+    var(--np-color-accent);
+
+  color:
+    var(--np-color-primary);
+}
+
+.np-catalog-cta__button--primary:hover,
+.np-catalog-cta__button--primary:focus-visible {
+  filter:
+    brightness(0.96);
+}
+
+.np-catalog-cta__button--secondary {
+  border:
+    1px solid
+    var(--np-color-primary);
+
+  background-color:
+    var(--np-color-white);
+
+  color:
+    var(--np-color-primary);
+}
+
+.np-catalog-cta__button--secondary:hover,
+.np-catalog-cta__button--secondary:focus-visible {
+  background-color:
+    var(--np-color-primary);
+
+  color:
+    var(--np-color-white);
+}
+
+@media (max-width: 599px) {
+  .np-catalog-cta {
+    padding-block:
+      var(--np-space-xl);
+  }
+
+  .np-catalog-cta__actions {
+    flex-direction: column;
+  }
+
+  .np-catalog-cta__button {
+    width: 100%;
+  }
+}

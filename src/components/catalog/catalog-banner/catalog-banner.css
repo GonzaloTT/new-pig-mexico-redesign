@@ -1,0 +1,309 @@
+/* ==========================================================================
+   CATALOG BANNER
+   ========================================================================== */
+
+.np-catalog-banner {
+  position: relative;
+
+  min-height: 300px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  border-radius:
+    var(--np-radius-lg);
+
+  background-color:
+    var(--np-color-primary);
+
+  color:
+    var(--np-color-white);
+
+  box-shadow:
+    var(--np-shadow-sm);
+}
+
+.np-catalog-banner__visual {
+  position: absolute;
+  inset: 0;
+}
+
+.np-catalog-banner__placeholder {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #71808a,
+      #9aa6ad
+    );
+}
+
+.np-catalog-banner__placeholder::before {
+  content: '';
+
+  position: absolute;
+
+  width: 55%;
+  height: 150%;
+
+  right: -8%;
+  top: -20%;
+
+  transform:
+    rotate(18deg);
+
+  background:
+    rgb(255 255 255 / 7%);
+}
+
+.np-catalog-banner__placeholder-label {
+  position: absolute;
+
+  top: var(--np-space-md);
+  right: var(--np-space-md);
+
+  z-index: 2;
+
+  padding:
+    0.35rem
+    0.55rem;
+
+  border-radius:
+    var(--np-radius-sm);
+
+  background-color:
+    rgb(255 255 255 / 85%);
+
+  color:
+    var(--np-color-primary);
+
+  font-size:
+    0.62rem;
+
+  font-weight:
+    var(--np-font-weight-bold);
+
+  letter-spacing:
+    0.05em;
+
+  text-transform:
+    uppercase;
+}
+
+/* Placeholder gráfico */
+
+.np-catalog-banner__placeholder-art {
+  position: absolute;
+
+  right: 8%;
+  bottom: 14%;
+
+  width: 34%;
+  min-width: 180px;
+
+  aspect-ratio: 1.5 / 1;
+
+  transform:
+    perspective(450px)
+    rotateY(-12deg)
+    rotateX(4deg);
+}
+
+.np-catalog-banner__placeholder-art span {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 24%;
+
+  border-radius:
+    10px;
+
+  background-color:
+    rgb(255 255 255 / 22%);
+
+  box-shadow:
+    0 8px 18px
+    rgb(0 0 0 / 10%);
+}
+
+.np-catalog-banner__placeholder-art span:nth-child(1) {
+  top: 0;
+}
+
+.np-catalog-banner__placeholder-art span:nth-child(2) {
+  top: 36%;
+  left: 8%;
+}
+
+.np-catalog-banner__placeholder-art span:nth-child(3) {
+  top: 72%;
+  left: 16%;
+}
+
+.np-catalog-banner__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgb(
+        var(
+          --np-brand-dark-blue-rgb
+        ) / 95%
+      )
+      0%,
+
+      rgb(
+        var(
+          --np-brand-dark-blue-rgb
+        ) / 82%
+      )
+      38%,
+
+      rgb(
+        var(
+          --np-brand-dark-blue-rgb
+        ) / 35%
+      )
+      68%,
+
+      transparent
+      100%
+    );
+}
+
+.np-catalog-banner__content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 620px;
+
+  padding:
+    clamp(
+      var(--np-space-lg),
+      4vw,
+      calc(var(--np-space-xl) * 1.2)
+    );
+}
+
+.np-catalog-banner__eyebrow {
+  display: inline-block;
+
+  margin-bottom:
+    var(--np-space-sm);
+
+  padding:
+    0.32rem
+    0.6rem;
+
+  border-radius:
+    var(--np-radius-full);
+
+  background-color:
+    var(--np-color-accent);
+
+  color:
+    var(--np-color-primary);
+
+  font-family:
+    var(--np-font-family-body);
+
+  font-size:
+    var(--np-font-size-xs);
+
+  font-weight:
+    var(--np-font-weight-bold);
+
+  letter-spacing:
+    0.06em;
+
+  text-transform:
+    uppercase;
+}
+
+.np-catalog-banner__title {
+  margin:
+    0
+    0
+    var(--np-space-sm);
+
+  color:
+    var(--np-color-white);
+}
+
+.np-catalog-banner__description {
+  max-width: 560px;
+
+  margin: 0;
+
+  color:
+    rgb(
+      var(
+        --np-brand-white-rgb
+      ) / 90%
+    );
+
+  line-height: 1.6;
+}
+
+@media (max-width: 699px) {
+  .np-catalog-banner {
+    min-height: 350px;
+  }
+
+  .np-catalog-banner__overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgb(
+          var(
+            --np-brand-dark-blue-rgb
+          ) / 95%
+        )
+        0%,
+
+        rgb(
+          var(
+            --np-brand-dark-blue-rgb
+          ) / 75%
+        )
+        60%,
+
+        rgb(
+          var(
+            --np-brand-dark-blue-rgb
+          ) / 25%
+        )
+        100%
+      );
+  }
+
+  .np-catalog-banner__placeholder-art {
+    top: 12%;
+    right: 50%;
+
+    width: 55%;
+
+    transform:
+      translateX(50%);
+  }
+
+  .np-catalog-banner__content {
+    padding:
+      var(--np-space-lg);
+  }
+}

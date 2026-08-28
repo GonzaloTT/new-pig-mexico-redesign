@@ -1,0 +1,63 @@
+/* ==========================================================================
+   CATALOG LAYOUT
+   ========================================================================== */
+
+.np-catalog-layout {
+  padding-block:
+    var(--np-space-xl)
+    calc(var(--np-space-xl) * 2);
+
+  background-color:
+    var(--np-color-background);
+}
+
+.np-catalog-layout__container {
+  display: grid;
+
+  grid-template-columns:
+    minmax(230px, 280px)
+    minmax(0, 1fr);
+
+  gap:
+    clamp(
+      var(--np-space-lg),
+      3vw,
+      var(--np-space-xl)
+    );
+
+  align-items:
+    start;
+}
+
+.np-catalog-layout__sidebar {
+  min-width: 0;
+}
+
+.np-catalog-layout__content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap:
+    var(--np-space-xl);
+}
+
+@media (max-width: 899px) {
+  .np-catalog-layout__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .np-catalog-layout {
+    padding-block:
+      var(--np-space-lg)
+      var(--np-space-xl);
+  }
+
+  .np-catalog-layout__content {
+    gap:
+      var(--np-space-lg);
+  }
+}

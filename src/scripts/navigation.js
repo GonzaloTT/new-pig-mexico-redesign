@@ -19,9 +19,9 @@ function initMobileNavigation() {
     return;
   }
 
-  const mobileLinks =
+  const mobileNavigationLinks =
     mobileNav.querySelectorAll(
-      '.np-header__mobile-nav-link'
+      'a.np-header__mobile-nav-link'
     );
 
   function openMenu() {
@@ -69,7 +69,7 @@ function initMobileNavigation() {
     closeMenu
   );
 
-  mobileLinks.forEach((link) => {
+  mobileNavigationLinks.forEach((link) => {
     link.addEventListener(
       'click',
       closeMenu
