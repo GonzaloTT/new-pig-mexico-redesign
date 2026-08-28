@@ -102,32 +102,6 @@ box-shadow:
     justify-content: center;
 
     transform: none;
-
-    .np-whatsapp-float--attention {
-    animation:
-      np-whatsapp-attention-mobile
-      1.6s
-      ease;
-  }
-
-  @keyframes np-whatsapp-attention-mobile {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-
-    28% {
-      transform: scale(1.09);
-    }
-
-    48% {
-      transform: scale(1.025);
-    }
-
-    68% {
-      transform: scale(1.06);
-    }
-  }
   }
 
   .np-whatsapp-float:hover {
@@ -210,10 +184,28 @@ box-shadow:
   }
 }
 
+@keyframes np-whatsapp-attention-mobile {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  28% {
+    transform: scale(1.09);
+  }
+
+  48% {
+    transform: scale(1.025);
+  }
+
+  68% {
+    transform: scale(1.06);
+  }
+}
+
 @keyframes np-whatsapp-attention-ring {
   0% {
     opacity: 0;
-
     transform: scale(0.9);
   }
 
@@ -223,8 +215,16 @@ box-shadow:
 
   100% {
     opacity: 0;
-
     transform: scale(1.18);
+  }
+}
+
+@media (max-width: 599px) {
+  .np-whatsapp-float--attention {
+    animation:
+      np-whatsapp-attention-mobile
+      1.6s
+      ease;
   }
 }
 
@@ -241,10 +241,10 @@ box-shadow:
   .np-whatsapp-float:hover {
     transform: translateY(-50%);
   }
+}
 
-  @media (max-width: 599px) {
-    .np-whatsapp-float:hover {
-      transform: none;
-    }
+@media (prefers-reduced-motion: reduce) and (max-width: 599px) {
+  .np-whatsapp-float:hover {
+    transform: none;
   }
 }
