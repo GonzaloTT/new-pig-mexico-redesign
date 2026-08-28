@@ -1,5 +1,9 @@
 import './whatsapp-float.css';
 
+const FIRST_ATTENTION_DELAY = 15000;
+const ATTENTION_INTERVAL = 50000;
+const ATTENTION_DURATION = 1600;
+
 export function createWhatsappFloat() {
   const phone = '52442337055';
   const message = encodeURIComponent(
@@ -9,7 +13,7 @@ export function createWhatsappFloat() {
   return `
     <a
       class="np-whatsapp-float"
-       href="https://wa.me/${phone}?text=${message}"
+      href="https://wa.me/${phone}?text=${message}"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar a New Pig México por WhatsApp"
@@ -31,6 +35,129 @@ export function createWhatsappFloat() {
   `;
 }
 
+export function initWhatsappFloatAttention() {
+  const whatsappFloat =
+    document.querySelector('.np-whatsapp-float');
+
+  if (!whatsappFloat) {
+    return;
+  }
+
+  const reducedMotion =
+    window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    );
+
+  if (reducedMotion.matches) {
+    return;
+  }
+
+  let attentionTimeout = null;
+  let attentionInterval = null;
+  let removeAnimationTimeout = null;
+
+  function canAnimate() {
+    return (
+      !whatsappFloat.matches(':hover') &&
+      !whatsappFloat.matches(':focus-visible')
+    );
+  }
+
+  function triggerAttention() {
+    if (!canAnimate()) {
+      return;
+    }
+
+    /*
+     * Removemos primero la clase para permitir que
+     * la animación pueda reiniciarse correctamente.
+     */
+    whatsappFloat.classList.remove(
+      'np-whatsapp-float--attention'
+    );
+
+    void whatsappFloat.offsetWidth;
+
+    whatsappFloat.classList.add(
+      'np-whatsapp-float--attention'
+    );
+
+    window.clearTimeout(
+      removeAnimationTimeout
+    );
+
+    removeAnimationTimeout =
+      window.setTimeout(() => {
+        whatsappFloat.classList.remove(
+          'np-whatsapp-float--attention'
+        );
+      }, ATTENTION_DURATION);
+  }
+
+  function startAttentionCycle() {
+    stopAttentionCycle();
+
+    attentionTimeout =
+      window.setTimeout(() => {
+        triggerAttention();
+
+        attentionInterval =
+          window.setInterval(
+            triggerAttention,
+            ATTENTION_INTERVAL
+          );
+      }, FIRST_ATTENTION_DELAY);
+  }
+
+  function stopAttentionCycle() {
+    if (attentionTimeout) {
+      window.clearTimeout(
+        attentionTimeout
+      );
+
+      attentionTimeout = null;
+    }
+
+    if (attentionInterval) {
+      window.clearInterval(
+        attentionInterval
+      );
+
+      attentionInterval = null;
+    }
+  }
+
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      stopAttentionCycle();
+    } else {
+      startAttentionCycle();
+    }
+  }
+
+  document.addEventListener(
+    'visibilitychange',
+    handleVisibilityChange
+  );
+
+  reducedMotion.addEventListener(
+    'change',
+    (event) => {
+      if (event.matches) {
+        stopAttentionCycle();
+
+        whatsappFloat.classList.remove(
+          'np-whatsapp-float--attention'
+        );
+      } else {
+        startAttentionCycle();
+      }
+    }
+  );
+
+  startAttentionCycle();
+}
+
 function iconWhatsapp() {
   return `
     <svg
@@ -40,7 +167,6 @@ function iconWhatsapp() {
       fill="none"
       aria-hidden="true"
     >
-      <!-- Globo de conversación -->
       <path
         d="M12 3.2
           a8.2 8.2 0 0 0-7.05 12.38
@@ -53,7 +179,6 @@ function iconWhatsapp() {
         stroke-linejoin="round"
       />
 
-      <!-- Teléfono -->
       <path
         d="M8.4 8.1
           c.25-.45.55-.47.85-.47

@@ -36,7 +36,7 @@ export function createBlogCta() {
           <div class="np-blog-cta__actions">
 
             <a
-              href="#"
+              href="${import.meta.env.BASE_URL}cotizador/"
               class="np-button np-button--accent np-blog-cta__primary"
             >
               Solicitar cotización

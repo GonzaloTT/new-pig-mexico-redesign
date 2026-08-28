@@ -6,7 +6,7 @@ import '../styles/global.css';
 
 import { createHeader } from '../components/header/header.js';
 import { createFooter } from '../components/footer/footer.js';
-import { createWhatsappFloat } from '../components/whatsapp-float/whatsapp-float.js';
+import { createWhatsappFloat, initWhatsappFloatAttention } from '../components/whatsapp-float/whatsapp-float.js';
 
 import { initNavigation } from '../scripts/navigation.js';
 
@@ -44,6 +44,7 @@ function bootstrap() {
 
   initNavigation();
   initBlogPostsPagination();
+  initWhatsappFloatAttention();
 }
 
 document.addEventListener(

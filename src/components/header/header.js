@@ -140,6 +140,7 @@ export function createHeader() {
               Acerca de Nosotros
             </a>
           </li>
+          </ul>
       </nav>
       <div class="np-header__overlay" id="np-header-overlay" data-state="closed"></div>
     </header>

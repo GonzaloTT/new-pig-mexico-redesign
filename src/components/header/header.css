@@ -379,14 +379,25 @@
   position: fixed;
   top: 0;
   right: 0;
+
   height: 100%;
   width: min(320px, 85vw);
+
   background-color: var(--np-color-white);
   box-shadow: var(--np-shadow-lg);
-  z-index: var(--np-z-overlay);
-  padding: calc(var(--np-space-xl) + 2.5rem) var(--np-space-lg) var(--np-space-lg);
+
+  z-index: calc(var(--np-z-overlay) + 1);
+
+  padding:
+    calc(var(--np-space-xl) + 2.5rem)
+    var(--np-space-lg)
+    var(--np-space-lg);
+
   transform: translateX(100%);
-  transition: transform var(--np-transition-slow);
+
+  transition:
+    transform var(--np-transition-slow);
+
   overflow-y: auto;
 }
 

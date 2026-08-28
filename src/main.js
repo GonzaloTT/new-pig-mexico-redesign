@@ -34,7 +34,7 @@ import { initHeroCarousel } from './scripts/hero-carousel.js';
 import { initForms } from './scripts/forms.js';
 
 // Componentes whatsapp-float
-import { createWhatsappFloat } from './components/whatsapp-float/whatsapp-float.js';
+import { createWhatsappFloat, initWhatsappFloatAttention } from './components/whatsapp-float/whatsapp-float.js';
 
 function renderHome(root) {
   root.innerHTML = `
@@ -64,6 +64,7 @@ function bootstrap() {
   initNavigation();
   initHeroCarousel();
   initForms();
+  initWhatsappFloatAttention();
 }
 
 document.addEventListener('DOMContentLoaded', bootstrap);
