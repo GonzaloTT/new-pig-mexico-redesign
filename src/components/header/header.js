@@ -62,29 +62,6 @@ export function createHeader() {
               </li>
               <li><a href="${BASE_URL}#find-your-solution" class="np-header__nav-link">Encuentra tu Solución</a></li>
               <li><a href="${BASE_URL}cotizador/" class="np-header__nav-link">Cotizador</a></li>
-              <li class="np-header__nav-item--dropdown">
-              <button
-                type="button"
-                class="np-header__nav-link np-header__dropdown-toggle"
-                aria-expanded="false"
-                aria-haspopup="true"
-                data-header-dropdown-toggle
-              >
-                Recursos
-                ${iconChevronDown()}
-              </button>
-
-              <ul class="np-header__dropdown-menu">
-              <li>
-                  <a
-                    href="${BASE_URL}algoritmo-pig/"
-                    class="np-header__dropdown-link"
-                  >
-                    Algoritmo Pig
-                  </a>
-                </li>
-                </ul>
-              </li>
               <li><a href="${BASE_URL}blog/" class="np-header__nav-link">Blog</a></li>
               <li><a href="${BASE_URL}#about-us" class="np-header__nav-link">Acerca de Nosotros</a></li>
             </ul>
@@ -109,9 +86,6 @@ export function createHeader() {
 
             <a href="#" class="np-button--icon np-header__action" aria-label="Contactar por WhatsApp">
               ${iconWhatsapp()}
-            </a>
-            <a href="#" class="np-button--icon np-header__action" aria-label="Mi cuenta">
-              ${iconUser()}
             </a>
             <a href="#" class="np-button--icon np-header__action" aria-label="Carrito de compras">
               ${iconCart()}
@@ -157,15 +131,6 @@ export function createHeader() {
             </a>
           </li>
           <li><a href="${BASE_URL}cotizador/" class="np-header__mobile-nav-link">Cotizador</a></li>
-          <li><a href="#" class="np-header__mobile-nav-link">Recursos</a></li>
-          <li>
-            <a
-              href="${BASE_URL}algoritmo-pig/"
-              class="np-header__mobile-nav-link"
-            >
-              Algoritmo Pig
-            </a>
-          </li>
           <li><a href="${BASE_URL}blog/" class="np-header__mobile-nav-link">Blog</a></li>
           <li>
             <a
@@ -215,15 +180,6 @@ function iconWhatsapp() {
     <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M20 12a8 8 0 1 1-3.7-6.8L20 4l-1.2 3.7A8 8 0 0 1 20 12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
       <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5.3 0 .6 0 .8-.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-  `;
-}
-
-function iconUser() {
-  return `
-    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/>
-      <path d="M4.5 20c1.4-3.5 4.3-5.5 7.5-5.5s6.1 2 7.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   `;
 }

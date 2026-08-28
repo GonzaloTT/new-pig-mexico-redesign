@@ -30,16 +30,7 @@
   position: absolute;
   inset: 0;
 
-  background-image:
-    linear-gradient(
-      90deg,
-      rgb(var(--np-brand-dark-blue-rgb) / 90%) 0%,
-      rgb(var(--np-brand-dark-blue-rgb) / 72%) 28%,
-      rgb(var(--np-brand-dark-blue-rgb) / 28%) 52%,
-      rgb(var(--np-brand-dark-blue-rgb) / 10%) 70%,
-      rgb(var(--np-brand-dark-blue-rgb) / 15%) 100%
-    ),
-    var(--np-hero-bg-image);
+  background-image: var(--np-hero-bg-image);
 
   background-size: cover;
   background-position: center 65%;
@@ -223,6 +214,29 @@
   display: flex;
   flex-direction: column;
   gap: var(--np-space-md);
+
+  padding: var(--np-space-lg);
+
+  border-radius: var(--np-radius-lg);
+
+  transition:
+    background-color 450ms ease,
+    backdrop-filter 450ms ease;
+}
+
+.np-hero[data-show-content="true"] .np-hero__content {
+  background-color:
+    rgb(var(--np-brand-dark-blue-rgb) / 32%);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.np-hero[data-show-content="false"] .np-hero__content {
+  background-color: transparent;
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .np-hero__title {

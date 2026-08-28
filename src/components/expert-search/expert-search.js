@@ -39,11 +39,7 @@ export function createExpertSearch() {
             </p>
 
             <div class="np-expert-search__actions">
-              <a href="#" class="np-button np-button--accent">
-                Encontrar mi solución
-              </a>
-
-              <a href="#" class="np-button np-button--outline-dark">
+              <a href="${import.meta.env.BASE_URL}cotizador/" class="np-button np-button--outline-dark">
                 Solicitar cotización
               </a>
             </div>
@@ -102,17 +98,33 @@ export function createExpertSearch() {
                 <button
                   type="button"
                   class="np-chip"
-                  data-chip-value="Químicos"
+                  data-chip-value="Derrames de agua"
                 >
-                  Químicos
+                  Derrames de agua
                 </button>
 
                 <button
                   type="button"
                   class="np-chip"
-                  data-chip-value="Mantenimiento"
+                  data-chip-value="Derrames de petróleo"
                 >
-                  Mantenimiento
+                  Derrames de petróleo
+                </button>
+
+                <button
+                  type="button"
+                  class="np-chip"
+                  data-chip-value="Derrames químicos"
+                >
+                  Derrames químicos
+                </button>
+              
+                <button
+                  type="button"
+                  class="np-chip"
+                  data-chip-value="Otros"
+                >
+                  Otros
                 </button>
               </div>
 

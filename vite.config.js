@@ -8,10 +8,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(__dirname, 'index.html'),
-        pigAlgorithm: resolve(
-          __dirname,
-          'algoritmo-pig/index.html'
-        ),
         blog: resolve(
           __dirname,
           'blog/index.html'
