@@ -11,9 +11,12 @@
 
   overflow: hidden;
 
-  /* Fallback mientras carga la primera imagen */
   background-color: var(--np-color-primary);
 }
+
+/* ==========================================================================
+   BACKGROUNDS
+   ========================================================================== */
 
 .np-hero__backgrounds {
   position: absolute;
@@ -48,40 +51,21 @@
   opacity: 1;
 }
 
-@media (min-width: 1200px) and (max-width: 1439px) {
-  .np-hero__background {
-    background-position: center 68%;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1199px) {
-  .np-hero__background {
-    background-position: 48% 68%;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 899px) {
-  .np-hero__background {
-    background-position: 42% center;
-  }
-}
-
-@media (max-width: 599px) {
-  .np-hero {
-    padding-block: var(--np-space-xl);
-  }
-
-  .np-hero__background {
-    background-position: 35% center;
-  }
-}
+/* ==========================================================================
+   INNER LAYOUT
+   ========================================================================== */
 
 .np-hero__inner {
   position: relative;
+
   z-index: 2;
+
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: var(--np-space-xl);
+
   align-items: center;
 }
 
@@ -98,6 +82,7 @@
   z-index: 3;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -112,7 +97,8 @@
 
   padding: 0;
 
-  border: 1px solid
+  border:
+    1px solid
     rgb(var(--np-brand-white-rgb) / 80%);
 
   border-radius: 50%;
@@ -129,40 +115,41 @@
 
 .np-hero__carousel-indicator:hover,
 .np-hero__carousel-indicator:focus-visible {
-  background-color: var(--np-color-white);
+  background-color:
+    var(--np-color-white);
 
-  transform: scale(1.15);
+  transform:
+    scale(1.15);
 }
 
 .np-hero__carousel-indicator[aria-current="true"] {
-  background-color: var(--np-color-accent);
+  background-color:
+    var(--np-color-accent);
 
-  border-color: var(--np-color-accent);
+  border-color:
+    var(--np-color-accent);
 
-  transform: scale(1.2);
+  transform:
+    scale(1.2);
 }
 
-@media (max-width: 599px) {
-  .np-hero__carousel-controls {
-    bottom: var(--np-space-xs);
-  }
-
-  .np-hero__carousel-indicator {
-    width: 8px;
-    height: 8px;
-  }
-}
+/* ==========================================================================
+   PRIMARY CONTENT
+   ========================================================================== */
 
 .np-hero__primary-content {
   display: flex;
+
   flex-direction: column;
 
-  gap: var(--np-space-md);
+  gap:
+    var(--np-space-md);
 
   opacity: 1;
   visibility: visible;
 
-  transform: translateY(0);
+  transform:
+    translateY(0);
 
   transition:
     opacity 450ms ease,
@@ -175,127 +162,177 @@
   opacity: 0;
   visibility: hidden;
 
-  transform: translateY(-8px);
+  transform:
+    translateY(-8px);
 
   pointer-events: none;
 }
 
-/* --- Visual (center) --- */
-.np-hero__visual {
-  display: none;
-}
+/* ==========================================================================
+   CONTENT PANEL
+   ========================================================================== */
 
-@media (min-width: 1024px) {
-  .np-hero__inner {
-    grid-template-columns:
-      minmax(320px, 1fr)
-      minmax(260px, 1.35fr)
-      minmax(280px, 0.8fr);
-
-    gap: var(--np-space-xl);
-  }
-
-  .np-hero__visual {
-    display: block;
-    min-height: 360px;
-  }
-
-  .np-hero__sidebar {
-    grid-column: 3;
-    align-self: stretch;
-    justify-self: end;
-    width: 100%;
-    max-width: 340px;
-  }
-}
-
-/* --- Content --- */
 .np-hero__content {
+  box-sizing: border-box;
+
   display: flex;
+
   flex-direction: column;
-  gap: var(--np-space-md);
 
-  padding: var(--np-space-lg);
+  gap:
+    var(--np-space-md);
 
-  border-radius: var(--np-radius-lg);
+  width:
+    fit-content;
+
+  max-width:
+    min(580px, 100%);
+
+  padding:
+    var(--np-space-lg);
+
+  border-radius:
+    var(--np-radius-lg);
 
   transition:
     background-color 450ms ease,
     backdrop-filter 450ms ease;
 }
 
-.np-hero[data-show-content="true"] .np-hero__content {
+.np-hero[data-show-content="true"]
+.np-hero__content {
   background-color:
-    rgb(var(--np-brand-dark-blue-rgb) / 32%);
+    rgb(
+      var(--np-brand-dark-blue-rgb) / 32%
+    );
 
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter:
+    blur(2px);
+
+  -webkit-backdrop-filter:
+    blur(2px);
 }
 
-.np-hero[data-show-content="false"] .np-hero__content {
-  background-color: transparent;
+.np-hero[data-show-content="false"]
+.np-hero__content {
+  background-color:
+    transparent;
 
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter:
+    none;
+
+  -webkit-backdrop-filter:
+    none;
 }
+
+/* ==========================================================================
+   TEXT
+   ========================================================================== */
 
 .np-hero__title {
-  font-family: var(--np-font-family-display);
-  font-size: var(--np-font-size-3xl);
-  font-weight: var(--np-font-weight-bold);
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: uppercase;
+  font-family:
+    var(--np-font-family-display);
 
-  color: var(--np-color-on-dark);
+  font-size:
+    var(--np-font-size-3xl);
+
+  font-weight:
+    var(--np-font-weight-bold);
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--np-color-on-dark);
 }
 
 .np-hero__description {
-  max-width: 46ch;
+  max-width:
+    46ch;
 
-  font-family: var(--np-font-family-body);
-  font-size: var(--np-font-size-md);
-  font-weight: var(--np-font-weight-regular);
+  font-family:
+    var(--np-font-family-body);
+
+  font-size:
+    var(--np-font-size-md);
+
+  font-weight:
+    var(--np-font-weight-regular);
 }
+
+/* ==========================================================================
+   ACTIONS
+   ========================================================================== */
 
 .np-hero__actions {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: var(--np-space-md);
-  margin-top: var(--np-space-sm);
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    var(--np-space-sm);
+
+  width: 100%;
 }
 
 .np-hero__actions .np-button {
-  white-space: nowrap;
+  white-space:
+    nowrap;
 }
 
-@media (min-width: 640px) {
-  .np-hero__actions {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
+/* ==========================================================================
+   VISUAL / CENTER COLUMN
+   ========================================================================== */
+
+.np-hero__visual {
+  display: none;
 }
 
-/* --- Sidebar (right) --- */
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
 .np-hero__sidebar {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
-  gap: var(--np-space-lg);
 
-  min-height: 360px;
+  gap:
+    var(--np-space-lg);
 
-  background-color: rgb(var(--np-brand-dark-blue-rgb) / 86%);
-  border: 1px solid rgb(var(--np-brand-white-rgb) / 12%);
-  border-radius: var(--np-radius-lg);
-  padding: var(--np-space-xl);
+  min-height:
+    360px;
+
+  padding:
+    var(--np-space-xl);
+
+  background-color:
+    rgb(
+      var(--np-brand-dark-blue-rgb) / 86%
+    );
+
+  border:
+    1px solid
+    rgb(
+      var(--np-brand-white-rgb) / 12%
+    );
+
+  border-radius:
+    var(--np-radius-lg);
 
   opacity: 1;
   visibility: visible;
 
-  transform: translateX(0);
+  transform:
+    translateX(0);
 
   transition:
     opacity 450ms ease,
@@ -303,31 +340,42 @@
     visibility 450ms ease;
 }
 
-/* Ocultar sidebar en slides promocionales */
-.np-hero[data-show-sidebar="false"] .np-hero__sidebar {
+.np-hero[data-show-sidebar="false"]
+.np-hero__sidebar {
   opacity: 0;
   visibility: hidden;
 
-  transform: translateX(12px);
+  transform:
+    translateX(12px);
 
   pointer-events: none;
 }
 
 .np-hero__sidebar-item {
   display: flex;
+
   align-items: center;
-  gap: var(--np-space-md);
+
+  gap:
+    var(--np-space-md);
 }
 
 .np-hero__sidebar-item:not(:last-child) {
-  padding-bottom: var(--np-space-md);
-  border-bottom: 1px solid rgb(var(--np-brand-white-rgb) / 12%);
+  padding-bottom:
+    var(--np-space-md);
+
+  border-bottom:
+    1px solid
+    rgb(
+      var(--np-brand-white-rgb) / 12%
+    );
 }
 
 .np-hero__sidebar-icon {
   flex-shrink: 0;
 
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -335,14 +383,20 @@
   height: 52px;
 
   border:
-    1px solid rgb(var(--np-brand-pig-blue-rgb) / 55%);
+    1px solid
+    rgb(
+      var(--np-brand-pig-blue-rgb) / 55%
+    );
 
   border-radius: 50%;
 
   background-color:
-    rgb(var(--np-brand-pig-blue-rgb) / 22%);
+    rgb(
+      var(--np-brand-pig-blue-rgb) / 22%
+    );
 
-  color: var(--np-color-secondary);
+  color:
+    var(--np-color-secondary);
 }
 
 .np-hero__sidebar-icon svg {
@@ -351,59 +405,354 @@
 }
 
 .np-hero__sidebar-title {
-  margin-bottom: 4px;
+  margin-bottom:
+    4px;
 
-  font-family: var(--np-font-family-body);
-  font-size: var(--np-font-size-base);
-  font-weight: var(--np-font-weight-bold);
+  font-family:
+    var(--np-font-family-body);
 
-  color: var(--np-color-on-dark);
+  font-size:
+    var(--np-font-size-base);
 
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  font-weight:
+    var(--np-font-weight-bold);
+
+  color:
+    var(--np-color-on-dark);
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.03em;
 }
 
 .np-hero__sidebar-text {
-  font-family: var(--np-font-family-body);
-  font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-regular);
+  font-family:
+    var(--np-font-family-body);
 
-  color: var(--np-color-on-dark-muted);
-  line-height: var(--np-line-height-snug);
+  font-size:
+    var(--np-font-size-sm);
+
+  font-weight:
+    var(--np-font-weight-regular);
+
+  color:
+    var(--np-color-on-dark-muted);
+
+  line-height:
+    var(--np-line-height-snug);
 }
 
-@media (max-width: 1023px) {
+/* ==========================================================================
+   DESKTOP BASE
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .np-hero__inner {
+    grid-template-columns:
+      minmax(320px, 1fr)
+      minmax(260px, 1.35fr)
+      minmax(280px, 0.8fr);
+
+    gap:
+      var(--np-space-xl);
+  }
+
+  .np-hero__visual {
+    display: block;
+
+    min-height:
+      360px;
+  }
+
   .np-hero__sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-column: 3;
+
+    align-self: stretch;
+
+    justify-self: end;
+
+    width: 100%;
+
+    max-width:
+      340px;
   }
 
-  .np-hero__sidebar-item {
-    flex: 1 1 45%;
-    min-width: 200px;
+  .np-hero__actions {
+    flex-direction: row;
+
+    align-items: center;
+
+    flex-wrap: nowrap;
   }
 }
 
-@media (max-width: 767px) {
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .np-hero {
+    padding-block:
+      var(--np-space-xl);
+  }
+
+  .np-hero__background {
+    background-position:
+      35% center;
+  }
+
+  .np-hero__carousel-controls {
+    bottom:
+      var(--np-space-xs);
+  }
+
+  .np-hero__carousel-indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .np-hero__content {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding:
+      var(--np-space-md);
+  }
+
+  .np-hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .np-hero__actions .np-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
   .np-hero__sidebar {
     display: none;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .np-hero__background {
+    background-position:
+      42% center;
+  }
+
+  .np-hero__content {
+    max-width:
+      540px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .np-hero__sidebar {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    min-height: auto;
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    min-height:
+      auto;
   }
 }
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .np-hero__background {
+    background-position:
+      48% 68%;
+  }
+
+  .np-hero__content {
+    max-width:
+      560px;
+  }
+}
+
+/* ==========================================================================
+   LAPTOP 1024 - 1199
+   ========================================================================== */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .np-hero__background {
+    background-position:
+      48% 68%;
+  }
+
+  .np-hero__inner {
+    grid-template-columns:
+      minmax(360px, 1.1fr)
+      minmax(80px, 0.35fr)
+      minmax(270px, 0.8fr);
+
+    gap:
+      var(--np-space-md);
+  }
+
+  .np-hero__content {
+    width: 100%;
+
+    max-width:
+      400px;
+
+    padding:
+      var(--np-space-md);
+  }
+
+  .np-hero__title {
+    font-size:
+      clamp(
+        2.3rem,
+        4vw,
+        2.9rem
+      );
+
+    line-height:
+      0.98;
+  }
+
+  .np-hero__description {
+    max-width:
+      34ch;
+
+    font-size:
+      var(--np-font-size-sm);
+  }
+
+  .np-hero__actions {
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+
+    width: 100%;
+
+    max-width:
+      280px;
+
+    gap:
+      var(--np-space-xs);
+  }
+
+  .np-hero__actions .np-button {
+    width: 100%;
+
+    justify-content:
+      center;
+
+    white-space:
+      nowrap;
+  }
+
+  .np-hero__sidebar {
+    max-width:
+      300px;
+
+    padding:
+      var(--np-space-lg);
+  }
+
+  .np-hero__sidebar-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .np-hero__sidebar-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ==========================================================================
+   LAPTOP 1200 - 1439
+   ========================================================================== */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .np-hero__background {
+    background-position:
+      center 68%;
+  }
+
+  .np-hero__inner {
+    grid-template-columns:
+      minmax(400px, 1.05fr)
+      minmax(160px, 0.75fr)
+      minmax(280px, 0.8fr);
+
+    gap:
+      var(--np-space-lg);
+  }
+
+  .np-hero__content {
+    width: 100%;
+
+    max-width:
+      520px;
+
+    padding:
+      var(--np-space-lg);
+  }
+
+  .np-hero__actions {
+    flex-direction:
+      row;
+
+    flex-wrap:
+      nowrap;
+
+    gap:
+      var(--np-space-sm);
+  }
+
+  .np-hero__actions .np-button {
+    flex-shrink:
+      1;
+  }
+
+  .np-hero__sidebar {
+    max-width:
+      320px;
+
+    padding:
+      var(--np-space-lg);
+  }
+}
+
+/* ==========================================================================
+   LARGE DESKTOP
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .np-hero__content {
+    max-width:
+      580px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .np-hero__background,
   .np-hero__primary-content,
   .np-hero__sidebar,
   .np-hero__carousel-indicator {
-    transition: none;
+    transition:
+      none;
   }
 }
