@@ -786,6 +786,133 @@
 }
 
 /* ==========================================================================
+   LAPTOP SAFE AREA FOR HERO LOGO
+   ========================================================================== */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .np-hero__content,
+  .np-hero__sidebar {
+    transform: translateY(56px);
+  }
+
+  /* CONTENT IZQUIERDO MÁS COMPACTO */
+  .np-hero__content {
+    max-width: 380px;
+
+    padding:
+      var(--np-space-md);
+
+    gap:
+      var(--np-space-sm);
+  }
+
+  .np-hero__primary-content {
+    gap:
+      var(--np-space-sm);
+  }
+
+  .np-hero__title {
+    font-size:
+      clamp(
+        2rem,
+        3.5vw,
+        2.6rem
+      );
+
+    line-height:
+      0.96;
+  }
+
+  .np-hero__description {
+    max-width:
+      31ch;
+
+    font-size:
+      var(--np-font-size-xs);
+
+    line-height:
+      1.45;
+  }
+
+  .np-hero__actions {
+    max-width:
+      250px;
+
+    gap:
+      0.4rem;
+  }
+
+  .np-hero__actions .np-button {
+    min-height:
+      40px;
+
+    padding:
+      0.55rem
+      0.85rem;
+
+    font-size:
+      var(--np-font-size-xs);
+  }
+
+  /* SIDEBAR COMPACTA */
+  .np-hero__sidebar {
+    align-self: center;
+
+    min-height: auto;
+    height: auto;
+
+    max-width: 300px;
+
+    padding:
+      var(--np-space-md);
+
+    gap:
+      var(--np-space-md);
+  }
+
+  .np-hero__sidebar-item {
+    gap:
+      var(--np-space-sm);
+  }
+
+  .np-hero__sidebar-item:not(:last-child) {
+    padding-bottom:
+      var(--np-space-sm);
+  }
+
+  .np-hero__sidebar-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .np-hero__sidebar-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .np-hero__sidebar-title {
+    font-size:
+      var(--np-font-size-sm);
+  }
+
+  .np-hero__sidebar-text {
+    font-size:
+      var(--np-font-size-xs);
+
+    line-height:
+      1.35;
+  }
+
+  .np-hero[data-show-content="false"] .np-hero__content {
+    transform: none;
+  }
+
+  .np-hero[data-show-sidebar="false"] .np-hero__sidebar {
+    transform: translateX(12px);
+  }
+}
+
+/* ==========================================================================
    REDUCED MOTION
    ========================================================================== */
 

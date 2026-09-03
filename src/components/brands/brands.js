@@ -4,54 +4,64 @@ const BASE_URL = import.meta.env.BASE_URL;
 
 const brands = [
   {
-    id: 'brand-01',
+    id: 'general-motors',
     image:
-      `${BASE_URL}images/brands/brand-01.png`
+      `${BASE_URL}images/brands/general-motors-logo.webp`,
+    alt: 'General Motors'
   },
   {
-    id: 'brand-02',
+    id: 'vallen',
     image:
-      `${BASE_URL}images/brands/brand-02.png`
+      `${BASE_URL}images/brands/vallen-logo.png`,
+    alt: 'Vallen'
   },
   {
-    id: 'brand-03',
+    id: 'fastenal',
     image:
-      `${BASE_URL}images/brands/brand-03.png`
+      `${BASE_URL}images/brands/fastenal-logo.svg`,
+    alt: 'Fastenal'
   },
   {
-    id: 'brand-04',
+    id: 'mundo-seguridad',
     image:
-      `${BASE_URL}images/brands/brand-04.png`
+      `${BASE_URL}images/brands/Mundo-Seguridad-logo.webp`,
+    alt: 'Mundo de Seguridad'
   },
   {
-    id: 'brand-05',
+    id: 'lozoya',
     image:
-      `${BASE_URL}images/brands/brand-05.png`
+      `${BASE_URL}images/brands/Lozoya-logo.png`,
+    alt: 'Lozoya'
   },
   {
-    id: 'brand-06',
+    id: 'doall',
     image:
-      `${BASE_URL}images/brands/brand-06.png`
+      `${BASE_URL}images/brands/doall_logo.png`,
+    alt: 'Doall'
   },
   {
-    id: 'brand-07',
+    id: 'sibsa',
     image:
-      `${BASE_URL}images/brands/brand-07.png`
+      `${BASE_URL}images/brands/Sibsa-logo.webp`,
+    alt: 'Sibsa'
   },
   {
-    id: 'brand-08',
+    id: 'pib',
     image:
-      `${BASE_URL}images/brands/brand-08.png`
+      `${BASE_URL}images/brands/PIB-logo.jpg`,
+    alt: 'PIB'
   },
   {
-    id: 'brand-09',
+    id: 'rayhsa',
     image:
-      `${BASE_URL}images/brands/brand-09.png`
+      `${BASE_URL}images/brands/logo_rayhsa.png`,
+    alt: 'Rayhsa'
   },
   {
-    id: 'brand-10',
+    id: 'pro-seg-ind',
     image:
-      `${BASE_URL}images/brands/brand-10.png`
+      `${BASE_URL}images/brands/brand-10.png`,
+    alt: 'Pro-Seg-Ind'
   }
 ];
 
