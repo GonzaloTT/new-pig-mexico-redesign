@@ -8,7 +8,7 @@ export const heroSlides = [
       `${BASE_URL}images/hero/hero-new-pig.png`,
 
     mobileImage:
-      `${BASE_URL}images/hero/hero-new-pig.png`,
+      `${BASE_URL}images/hero/hero-new-pig-mobile.png`,
 
     showContent: true,
     showSidebar: true

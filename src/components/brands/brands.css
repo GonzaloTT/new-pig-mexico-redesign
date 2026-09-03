@@ -3,60 +3,196 @@
    ========================================================================== */
 
 .np-brands {
-  padding-block: var(--np-space-xl);
-  border-top: 1px solid var(--np-color-border);
-  border-bottom: 1px solid var(--np-color-border);
+  padding-block:
+    var(--np-space-xl);
+
+  border-top:
+    1px solid
+    var(--np-color-border);
+
+  border-bottom:
+    1px solid
+    var(--np-color-border);
+
+  background-color:
+    var(--np-color-white);
 }
 
 .np-brands__header {
-  margin-bottom: var(--np-space-lg);
+  max-width: 680px;
+
+  margin-bottom:
+    var(--np-space-xl);
 }
 
 .np-brands__title {
-  font-size: var(--np-font-size-lg);
-  margin-bottom: var(--np-space-2xs);
+  margin-bottom:
+    var(--np-space-xs);
+
+  font-size:
+    var(--np-font-size-xl);
+
+  color:
+    var(--np-color-primary);
 }
 
 .np-brands__subtitle {
-  font-size: var(--np-font-size-sm);
-  color: var(--np-color-muted);
   margin: 0;
+
+  font-size:
+    var(--np-font-size-sm);
+
+  line-height:
+    1.6;
+
+  color:
+    var(--np-color-muted);
 }
+
+/* ==========================================================================
+   LOGO GRID
+   ========================================================================== */
 
 .np-brands__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--np-space-md);
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap:
+    var(--np-space-xl)
+    var(--np-space-lg);
+
+  align-items:
+    center;
 }
+
+/*
+ * Ya no usamos una tarjeta externa.
+ * Cada celda solamente centra el logo.
+ */
+.np-brands__item {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 100px;
+
+  padding:
+    var(--np-space-xs);
+
+  background-color:
+    transparent;
+
+  border: 0;
+}
+
+/* ==========================================================================
+   LOGOS
+   ========================================================================== */
+
+.np-brands__logo {
+  display: block;
+
+  border-radius: 25px;
+
+  width: auto;
+  max-width: 90%;
+
+  height: auto;
+  max-height: 88px;
+
+  object-fit:
+    contain;
+
+  object-position:
+    center;
+
+  transition:
+    transform var(--np-transition-fast);
+}
+
+.np-brands__item:hover
+.np-brands__logo {
+  transform:
+    scale(1.04);
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
 
 @media (min-width: 640px) {
   .np-brands__list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .np-brands__logo {
+    max-width: 88%;
+    max-height: 92px;
   }
 }
 
-@media (min-width: 1024px) {
+/* ==========================================================================
+   DESKTOP
+   ========================================================================== */
+
+@media (min-width: 900px) {
   .np-brands__list {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+      repeat(5, minmax(0, 1fr));
+
+    column-gap:
+      clamp(
+        var(--np-space-lg),
+        3vw,
+        var(--np-space-2xl)
+      );
+
+    row-gap:
+      var(--np-space-xl);
+  }
+
+  .np-brands__item {
+    min-height: 110px;
+  }
+
+  .np-brands__logo {
+    max-width: 92%;
+    max-height: 104px;
   }
 }
 
-.np-brands__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 64px;
-  padding: var(--np-space-sm);
-  border: 1px dashed var(--np-color-gray-medium);
-  border-radius: var(--np-radius-sm);
-  background-color: var(--np-color-gray-light);
-}
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
 
-.np-brands__logo-placeholder {
-  font-size: var(--np-font-size-sm);
-  font-weight: var(--np-font-weight-bold);
-  color: var(--np-color-gray-dark);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+@media (max-width: 599px) {
+  .np-brands {
+    padding-block:
+      var(--np-space-lg);
+  }
+
+  .np-brands__header {
+    margin-bottom:
+      var(--np-space-lg);
+  }
+
+  .np-brands__list {
+    gap:
+      var(--np-space-lg)
+      var(--np-space-md);
+  }
+
+  .np-brands__item {
+    min-height: 80px;
+  }
+
+  .np-brands__logo {
+    max-width: 94%;
+    max-height: 72px;
+  }
 }

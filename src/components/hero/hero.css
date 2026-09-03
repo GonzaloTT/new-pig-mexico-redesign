@@ -744,6 +744,48 @@
 }
 
 /* ==========================================================================
+   MAIN HERO - MOBILE SAFE LAYOUT
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .np-hero[data-slide="main"] {
+    padding-top: 0;
+  }
+
+  .np-hero[data-slide="main"] .np-hero__background {
+    background-position:
+      center top;
+
+    background-size:
+      cover;
+  }
+
+  .np-hero[data-slide="main"] .np-hero__inner {
+    min-height: 640px;
+
+    align-items: start;
+
+    padding-top: clamp(
+      165px,
+      38vw,
+      180px
+    );
+  }
+
+  .np-hero[data-slide="main"] .np-hero__content {
+    width: calc(100% - 2rem);
+
+    max-width: none;
+
+    margin:
+      0 auto;
+
+    padding:
+      var(--np-space-md);
+  }
+}
+
+/* ==========================================================================
    REDUCED MOTION
    ========================================================================== */
 
