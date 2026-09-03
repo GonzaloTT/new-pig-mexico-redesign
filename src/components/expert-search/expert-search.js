@@ -1,5 +1,9 @@
 import './expert-search.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
+const SPILL_CATEGORY_URL = `${BASE_URL}catalogo/?categoria=control-de-derrames-y-contencion`;
+
 /**
  * createExpertSearch
  * Sección "Expertos en Control de Derrames y Seguridad Industrial".
@@ -39,7 +43,7 @@ export function createExpertSearch() {
             </p>
 
             <div class="np-expert-search__actions">
-              <a href="${import.meta.env.BASE_URL}cotizador/" class="np-button np-button--outline-dark">
+              <a href="${BASE_URL}cotizador/" class="np-button np-button--outline-dark">
                 Solicitar cotización
               </a>
             </div>
@@ -83,50 +87,44 @@ export function createExpertSearch() {
               </div>
 
               <div
-                class="np-expert-search__chips"
-                role="group"
-                aria-label="Sugerencias de búsqueda"
-              >
-                <button
-                  type="button"
-                  class="np-chip"
-                  data-chip-value="Derrames de aceite"
+                  class="np-expert-search__chips"
+                  aria-label="Tipos de derrames"
                 >
-                  Derrames de aceite
-                </button>
+                  <a
+                    href="${SPILL_CATEGORY_URL}&tipo=aceite"
+                    class="np-chip"
+                  >
+                    Derrames de aceite
+                  </a>
 
-                <button
-                  type="button"
-                  class="np-chip"
-                  data-chip-value="Derrames de agua"
-                >
-                  Derrames de agua
-                </button>
+                  <a
+                    href="${SPILL_CATEGORY_URL}&tipo=agua"
+                    class="np-chip"
+                  >
+                    Derrames de agua
+                  </a>
 
-                <button
-                  type="button"
-                  class="np-chip"
-                  data-chip-value="Derrames de petróleo"
-                >
-                  Derrames de petróleo
-                </button>
+                  <a
+                    href="${SPILL_CATEGORY_URL}&tipo=petroleo"
+                    class="np-chip"
+                  >
+                    Derrames de petróleo
+                  </a>
 
-                <button
-                  type="button"
-                  class="np-chip"
-                  data-chip-value="Derrames químicos"
-                >
-                  Derrames químicos
-                </button>
-              
-                <button
-                  type="button"
-                  class="np-chip"
-                  data-chip-value="Otros"
-                >
-                  Otros
-                </button>
-              </div>
+                  <a
+                    href="${SPILL_CATEGORY_URL}&tipo=quimicos"
+                    class="np-chip"
+                  >
+                    Derrames químicos
+                  </a>
+
+                  <a
+                    href="${SPILL_CATEGORY_URL}&tipo=otros"
+                    class="np-chip"
+                  >
+                    Otros
+                  </a>
+                </div>
 
               <p
                 class="np-form-message"
@@ -144,7 +142,7 @@ export function createExpertSearch() {
 
         <div class="np-expert-search__media">
           <img
-            src="${import.meta.env.BASE_URL}images/expert-search/expert-search.jpeg"
+            src="${BASE_URL}images/expert-search/expert-search.jpeg"
             alt="Especialista de New Pig brindando asesoría en seguridad industrial"
             class="np-expert-search__image"
             loading="lazy"
